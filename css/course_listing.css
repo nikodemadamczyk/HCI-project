@@ -160,6 +160,10 @@ main {
     gap: 1rem;
 }
 
+.course-actions-link{
+    text-decoration: none;
+}
+
 .course-btn {
     padding: 0.75rem 1rem;
     border-radius: 6px;
@@ -167,7 +171,9 @@ main {
     cursor: pointer;
     transition: all 0.2s ease;
     flex: 1;
-    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-primary {
