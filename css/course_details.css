@@ -1,0 +1,237 @@
+@import 'base.css';
+
+/* Course Details Layout */
+.course-details {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.course-header {
+    background: var(--primary-navy);
+    color: var(--primary-white);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.course-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-code {
+    color: var(--light-orange);
+    font-size: 1.125rem;
+}
+
+.course-status {
+    background: var(--success-green);
+    color: var(--primary-white);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.course-meta {
+    display: flex;
+    gap: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.content-section {
+    background: var(--primary-white);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    color: var(--primary-navy);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-gray);
+}
+
+.section-content {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.content-list {
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
+}
+
+.content-list li {
+    margin-bottom: 0.5rem;
+    color: var(--text-gray);
+}
+
+/* Instructor Profile */
+.instructor-profile {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.instructor-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--text-gray);
+}
+
+.instructor-info h3 {
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.instructor-info p {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Schedule Display */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-item {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.schedule-day {
+    color: var(--primary-navy);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-time {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+}
+
+/* Room Location */
+.room-info {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.room-map {
+    width: 100%;
+    height: 200px;
+    background: var(--border-gray);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    margin-top: 1rem;
+}
+
+.enrollment-section {
+    background: var(--primary-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.enrollment-status {
+    font-size: 1.25rem;
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+}
+
+.enroll-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-orange);
+    color: var(--primary-white);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.enroll-btn:hover {
+    background: var(--light-orange);
+}
+
+/* Footer Styles */
+.footer-contact {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 2rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--text-gray);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-orange);
+}

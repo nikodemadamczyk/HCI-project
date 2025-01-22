@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space University - Profile Settings</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <div class="logo-container">
+                <a href="landing_page.html">
+                    <img src="../images/logo.svg" alt="Space University Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav__links">
+                <li><a href="landing_page.html" class="nav__link">Home</a></li>
+                <li><a href="course_listing.html" class="nav__link">Courses</a></li>
+                <li><a href="schedule.html" class="nav__link">Schedule</a></li>
+                <li><a href="profile_student.html" class="nav__link active">Profile</a></li>
+                <li><a href="auth_form.html" class="nav__link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="settings-container">
+        <!-- Settings Navigation -->
+        <aside class="settings-nav">
+            <h2 class="settings-nav-title">Settings</h2>
+            <ul class="settings-nav-list">
+                <li class="settings-nav-item">
+                    <a href="#" class="settings-nav-link active">
+                        <i class="fas fa-user settings-nav-icon"></i>
+                        Personal Information
+                    </a>
+                </li>
+                <li class="settings-nav-item">
+                    <a href="#" class="settings-nav-link">
+                        <i class="fas fa-bell settings-nav-icon"></i>
+                        Notifications
+                    </a>
+                </li>
+                <li class="settings-nav-item">
+                    <a href="#" class="settings-nav-link">
+                        <i class="fas fa-globe settings-nav-icon"></i>
+                        Language & Region
+                    </a>
+                </li>
+                <li class="settings-nav-item">
+                    <a href="#" class="settings-nav-link">
+                        <i class="fas fa-universal-access settings-nav-icon"></i>
+                        Accessibility
+                    </a>
+                </li>
+                <li class="settings-nav-item">
+                    <a href="#" class="settings-nav-link">
+                        <i class="fas fa-shield-alt settings-nav-icon"></i>
+                        Security
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Settings Content -->
+        <div class="settings-content">
+            <!-- Success Message -->
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle alert-icon"></i>
+                <div class="alert-content">
+                    <div class="alert-title">Profile Updated Successfully</div>
+                    <div class="alert-message">Your changes have been saved.</div>
+                </div>
+            </div>
+
+            <div class="settings-header">
+                <h1 class="settings-title">Personal Information</h1>
+                <p class="settings-description">Manage your personal information and contact details. This information will be displayed on your public profile.</p>
+            </div>
+
+            <form>
+                <!-- Basic Information -->
+                <div class="form-group">
+                    <h3 class="form-label">Basic Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="fullName">Full Name</label>
+                            <input type="text" id="fullName" class="form-input" value="Prof. Dr. Benjamin Weyers">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="academicTitle">Academic Title</label>
+                            <input type="text" id="academicTitle" class="form-input" value="Junior Professor">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="department">Department</label>
+                            <input type="text" id="department" class="form-input" value="Computer Science">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="facultyId">Faculty ID</label>
+                            <input type="text" id="facultyId" class="form-input" value="FAC2024001" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-group">
+                    <h3 class="form-label">Contact Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input type="email" id="email" class="form-input" value="b.weyers@space-university.edu">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Office Phone</label>
+                            <input type="tel" id="phone" class="form-input" value="+1 (555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="office">Office Location</label>
+                            <input type="text" id="office" class="form-input" value="H441">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="officeHours">Office Hours</label>
+                            <input type="text" id="officeHours" class="form-input" value="Thursday 13:00 - 14:00">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Visibility -->
+                <div class="form-group">
+                    <h3 class="form-label">Profile Visibility</h3>
+                    <div class="switch-group">
+                        <div>
+                            <div class="switch-label">Show Email Address</div>
+                            <div class="switch-description">Display your email address on your public profile</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                    </div>
+                    <div class="switch-group">
+                        <div>
+                            <div class="switch-label">Show Office Hours</div>
+                            <div class="switch-description">Display your office hours on your public profile</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                    </div>
+                    <div class="switch-group">
+                        <div>
+                            <div class="switch-label">Show Phone Number</div>
+                            <div class="switch-description">Display your office phone number on your public profile</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="switch-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Communication Preferences -->
+                <div class="form-group">
+                    <h3 class="form-label">Communication Preferences</h3>
+                    <div class="switch-group">
+                        <div>
+                            <div class="switch-label">Email Notifications</div>
+                            <div class="switch-description">Receive email notifications for important updates</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                    </div>
+                    <div class="switch-group">
+                        <div>
+                            <div class="switch-label">Course Announcements</div>
+                            <div class="switch-description">Receive notifications for course-related announcements</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">University History</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Academics</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Student Life</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Campus Services</a></li>
+                    <li><a href="#">Student Organizations</a></li>
+                    <li><a href="#">Housing</a></li>
+                    <li><a href="#">Athletics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact">
+                    <p>Space University Campus</p>
+                    <p>1234 Cosmos Street</p>
+                    <p>Galaxy City, GC 12345</p>
+                    <p>Email: info@space.edu</p>
+                    <p>Tel: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2025 Space University. All rights reserved.
+            </div>
+            <div class="footer-social">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

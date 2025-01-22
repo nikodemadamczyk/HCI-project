@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space University - Course Schedule</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/schedule.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <div class="logo-container">
+                <a href="landing_page.html">
+                    <img src="../images/logo.svg" alt="Space University Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav__links">
+                <li><a href="landing_page.html" class="nav__link">Home</a></li>
+                <li><a href="course_listing.html" class="nav__link">Courses</a></li>
+                <li><a href="schedule.html" class="nav__link active">Schedule</a></li>
+                <li><a href="profile_student.html" class="nav__link">Profile</a></li>
+                <li><a href="auth_form.html" class="nav__link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="schedule-container">
+        <div class="schedule-header">
+            <div class="semester-info">
+                <h1>Course Schedule</h1>
+                <p>Spring Semester 2025 (January 15 - May 15)</p>
+            </div>
+            <div class="schedule-controls">
+                <button class="btn btn-secondary">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Room Finder
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-clock"></i>
+                    Today
+                </button>
+            </div>
+        </div>
+
+        <div class="schedule-grid-container">
+            <div class="time-slots">
+                <div class="time-slot">8:00</div>
+                <div class="time-slot">9:00</div>
+                <div class="time-slot">10:00</div>
+                <div class="time-slot">11:00</div>
+                <div class="time-slot">12:00</div>
+                <div class="time-slot">13:00</div>
+                <div class="time-slot">14:00</div>
+                <div class="time-slot">15:00</div>
+                <div class="time-slot">16:00</div>
+                <div class="time-slot">17:00</div>
+                <div class="time-slot">18:00</div>
+                <div class="time-slot">19:00</div>
+                <div class="time-slot">20:00</div>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+
+                <!-- Monday Column -->
+                <div class="schedule-column">
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell">
+                        <div class="course-block type-lecture">
+                            <div class="course-name">Human-Computer Interaction</div>
+                            <div class="course-details">Prof. Dr. Weyers</div>
+                            <div class="course-room">
+                                <i class="fas fa-map-marker-alt"></i>
+                                H441
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell">
+                        <div class="course-block type-seminar">
+                            <div class="course-name">UI Design Seminar</div>
+                            <div class="course-details">Dr. Smith</div>
+                            <div class="course-room">
+                                <i class="fas fa-map-marker-alt"></i>
+                                B301
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                </div>
+
+                <!-- Tuesday Column -->
+                <div class="schedule-column">
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell">
+                        <div class="course-block type-lab">
+                            <div class="course-name">Interactive Systems Lab</div>
+                            <div class="course-details">Dr. Thompson</div>
+                            <div class="course-room">
+                                <i class="fas fa-map-marker-alt"></i>
+                                C204
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                </div>
+    
+                <!-- Wednesday Column -->
+                <div class="schedule-column">
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell">
+                        <div class="course-block type-lecture">
+                            <div class="course-name">Artificial Intelligence</div>
+                            <div class="course-details">Prof. Dr. Nguyen</div>
+                            <div class="course-room">
+                                <i class="fas fa-map-marker-alt"></i>
+                                D112
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                </div>
+    
+                <!-- Thursday Column -->
+                <div class="schedule-column">
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell">
+                        <div class="course-block type-seminar">
+                            <div class="course-name">Ethics in Technology</div>
+                            <div class="course-details">Dr. Patel</div>
+                            <div class="course-room">
+                                <i class="fas fa-map-marker-alt"></i>
+                                E303
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                </div>
+    
+                <!-- Friday Column -->
+                <div class="schedule-column">
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell">
+                        <div class="course-block type-lecture">
+                            <div class="course-name">Computer Networks</div>
+                            <div class="course-details">Prof. Dr. Lee</div>
+                            <div class="course-room">
+                                <i class="fas fa-map-marker-alt"></i>
+                                F104
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                    <div class="schedule-cell"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="room-details">
+            <div class="room-map">
+                <!-- Placeholder for a map or floor plan -->
+                <img src="../images/uni_plan_2.png" alt="Campus Plan" />
+            </div>
+            <div class="room-info">
+                <div class="info-item">
+                    <div class="info-label">Capacity</div>
+                    <div class="info-value">40 Students</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Amenities</div>
+                    <div class="info-value">Projector, Whiteboard</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Building</div>
+                    <div class="info-value">Science Building, Floor 4</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Room Number</div>
+                    <div class="info-value">H441</div>
+                </div>
+            </div>
+        </div>     
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">University History</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Academics</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Student Life</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Campus Services</a></li>
+                    <li><a href="#">Student Organizations</a></li>
+                    <li><a href="#">Housing</a></li>
+                    <li><a href="#">Athletics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact">
+                    <p>Space University Campus</p>
+                    <p>1234 Cosmos Street</p>
+                    <p>Galaxy City, GC 12345</p>
+                    <p>Email: info@space.edu</p>
+                    <p>Tel: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2025 Space University. All rights reserved.
+            </div>
+            <div class="footer-social">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>    

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space University - Authentication</title>
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <div class="logo-container">
+                <a href="landing_page.html">
+                    <img src="../images/logo.svg" alt="Space University Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav__links">
+                <li><a href="curses_dashboard.html" class="nav__link">Home</a></li>
+                <li><a href="course_listing.html" class="nav__link">Courses</a></li>
+                <li><a href="schedule.html" class="nav__link">Schedule</a></li>
+                <li><a href="profile_student.html" class="nav__link">Profile</a></li>
+                <li><a href="auth_form.html" class="nav__link active">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="auth_container">
+        <div class="auth-toggle">
+            <button class="toggle-button active" data-form="login">
+                <span>Login</span>
+            </button>
+            <button class="toggle-button" data-form="register">
+                <span>Register</span>
+            </button>
+        </div>
+    </div>
+    <div class="auth-forms-container">
+        <!-- Login Form -->
+        <div id="login-form" class="form-container active">
+            <div class="form-header">
+                <h2>Welcome Back</h2>
+                <p>Access your Space University account</p>
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <label class="form-label" for="login-email">Email</label>
+                    <input type="email" id="login-email" class="form-input" placeholder="you@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-input" placeholder="Enter your password"> <!-- error -->
+                    <!-- <span class="error-message">Invalid password. Please try again.</span> -->
+                </div>
+                
+                <button type="submit" class="form-button">Login</button>
+                
+                <div class="form-footer">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="register-form" class="form-container">
+            <div class="form-header">
+                <h2>Create Account</h2>
+                <p>Join Space University today</p>
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <label class="form-label" for="register-name">Full Name</label>
+                    <input type="text" id="register-name" class="form-input " placeholder="John Doe"> <!-- success -->
+                    <!-- <span class="success-message">Looks good!</span> -->
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="register-email">Email</label>
+                    <input type="email" id="register-email" class="form-input" placeholder="you@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="register-password">Password</label>
+                    <input type="password" id="register-password" class="form-input" placeholder="Create a password">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="register-confirm">Confirm Password</label>
+                    <input type="password" id="register-confirm" class="form-input" placeholder="Confirm your password">
+                </div>
+                
+                <button type="submit" class="form-button">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+            const forms = document.querySelectorAll('.form-container');
+            
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update button states
+                    toggleButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Show selected form
+                    const formId = button.getAttribute('data-form');
+                    forms.forEach(form => {
+                        form.classList.remove('active');
+                        if (form.id === `${formId}-form`) {
+                            form.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

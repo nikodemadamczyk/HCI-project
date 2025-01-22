@@ -1,0 +1,180 @@
+@import 'base.css';
+
+main {
+    flex: 1;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.section-title {
+    color: var(--primary-navy);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Course Cards */
+.course-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.course-card {
+    background: var(--primary-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-gray);
+}
+
+.course-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.course-card__title {
+    color: var(--primary-navy);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.course-card__professor {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+}
+
+.course-card__badge {
+    background: rgba(255, 124, 3, 0.1);
+    color: var(--primary-orange);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.course-card__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-gray);
+}
+
+.course-card__detail {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+}
+
+/* Schedule Grid */
+.schedule {
+    background: var(--primary-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-gray);
+}
+
+.schedule-link{
+    text-decoration: none;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: auto repeat(5, 1fr);
+    gap: 1px;
+    background: var(--border-gray);
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule-header {
+    background: var(--primary-navy);
+    color: var(--primary-white);
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.schedule-time {
+    background: var(--light-gray);
+    padding: 0.75rem;
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    text-align: right;
+}
+
+.schedule-cell {
+    background: var(--primary-white);
+    padding: 0.75rem;
+    min-height: 80px;
+}
+
+.schedule-event {
+    background: rgba(255, 124, 3, 0.1);
+    color: var(--primary-orange);
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    margin: -0.5rem;
+}
+
+/* Room Map */
+
+.container_map {
+    margin-top: 1.5rem;
+}
+.room-map {
+    background: var(--primary-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-gray);
+}
+
+/* Footer Styles */
+
+
+.footer-contact {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-orange);
+}

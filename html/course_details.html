@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space University - Course Details</title>
+    <link rel="stylesheet" href="../css/course_details.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <div class="logo-container">
+                <a href="landing_page.html">
+                    <img src="../images/logo.svg" alt="Space University Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav__links">
+                <li><a href="curses_dashboard.html" class="nav__link">Home</a></li>
+                <li><a href="course_listing.html" class="nav__link active">Courses</a></li>
+                <li><a href="schedule.html" class="nav__link">Schedule</a></li>
+                <li><a href="profile_student.html" class="nav__link">Profile</a></li>
+                <li><a href="auth_form.html" class="nav__link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="course-details">
+        <div class="course-header">
+            <div class="course-header__top">
+                <div>
+                    <h1 class="course-title">Human-Computer Interaction</h1>
+                    <div class="course-code">CS-HCI-301</div>
+                </div>
+                <span class="course-status">Enrollment Open</span>
+            </div>
+            <div class="course-meta">
+                <div class="meta-item">
+                    <span>Credits: 6 ECTS</span>
+                </div>
+                <div class="meta-item">
+                    <span>Semester: Winter 2024/25</span>
+                </div>
+                <div class="meta-item">
+                    <span>Department: Computer Science</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <!-- Left Column -->
+            <div class="main-content">
+                <section class="content-section">
+                    <h2 class="section-title">Course Description</h2>
+                    <div class="section-content">
+                        <p>This course introduces students to the fundamental principles and practices of Human-Computer Interaction (HCI). Topics covered include user-centered design, usability evaluation methods, interaction design patterns, and contemporary HCI research areas.</p>
+                        <h3 class="section-title">Learning Objectives</h3>
+                        <ul class="content-list">
+                            <li>Understand core HCI principles and theories</li>
+                            <li>Apply user-centered design methods</li>
+                            <li>Conduct usability evaluations</li>
+                            <li>Design and prototype interactive systems</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2 class="section-title">Instructor</h2>
+                    <div class="instructor-profile">
+                        <div class="instructor-avatar">BW</div>
+                        <div class="instructor-info">
+                            <h3>Prof. Dr. Benjamin Weyers</h3>
+                            <p>Professor of Human-Computer Interaction</p>
+                            <p>Office: H441</p>
+                            <p>Email: b.weyers@space-university.edu</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="sidebar-content">
+                <section class="content-section">
+                    <h2 class="section-title">Schedule & Location</h2>
+                    <div class="schedule-grid">
+                        <div class="schedule-item">
+                            <div class="schedule-day">Monday</div>
+                            <div class="schedule-time">14:00 - 15:30</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-day">Thursday</div>
+                            <div class="schedule-time">13:00 - 14:00</div>
+                            <div class="schedule-time">Office Hours</div>
+                        </div>
+                    </div>
+
+                    <div class="room-info">
+                        <h3>Room Location</h3>
+                        <p>Building H, Room 441</p>
+                        <div class="room-map">
+                            <img src="../images/uni_plan.png" alt="Campus Map" style="max-width: 100%; height: auto; border-radius: 8px;">
+                        </div>
+                    </div>
+                </section>
+
+                <div class="enrollment-section">
+                    <div class="enrollment-status">
+                        <strong>20/30</strong> spots remaining
+                    </div>
+                    <button class="enroll-btn">Enroll in Course</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">University History</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Academics</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Student Life</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Campus Services</a></li>
+                    <li><a href="#">Student Organizations</a></li>
+                    <li><a href="#">Housing</a></li>
+                    <li><a href="#">Athletics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact">
+                    <p>Space University Campus</p>
+                    <p>1234 Cosmos Street</p>
+                    <p>Galaxy City, GC 12345</p>
+                    <p>Email: info@space.edu</p>
+                    <p>Tel: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2025 Space University. All rights reserved.
+            </div>
+            <div class="footer-social">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

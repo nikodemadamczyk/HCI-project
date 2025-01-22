@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space University - Course Management System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../css/landing_page.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="logo-container">
+                <a href="landing_page.html">
+                    <img src="../images/logo.svg" alt="Space University Logo" class="logo">
+                </a>
+            </div>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search courses, programs, or resources...">
+            </div>
+
+            <div class="user-menu">
+                <a href="#" class="user-menu__item">
+                    <i class="far fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+                <a href="profile_student.html" class="user-menu__item">
+                    <i class="far fa-user"></i>
+                    <span>My Account</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="header__bottom">
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="curses_dashboard.html" class="nav-link">
+                        Dashboard
+                    </a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="#" class="nav-link">
+                        Courses
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown">
+                        <a href="course_listing.html" class="dropdown-item">Browse All Courses</a>
+                        <a href="curses_dashboard.html" class="dropdown-item">My Enrolled Courses</a>
+                        <a href="schedule.html" class="dropdown-item">Course Calendar</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#" class="nav-link">
+                        Programs
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-item">Undergraduate</a>
+                        <a href="#" class="dropdown-item">Graduate</a>
+                        <a href="#" class="dropdown-item">Certificates</a>
+                        <a href="#" class="dropdown-item">Professional Development</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#" class="nav-link">
+                        Resources
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#academic-calendar" class="dropdown-item">Academic Calendar</a>
+                        <a href="#" class="dropdown-item">Library</a>
+                        <a href="#help-support" class="dropdown-item">Support Center</a>
+                        <a href="#faq-preview" class="dropdown-item">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="decorative-element decorative-1"></div>
+        <div class="decorative-element decorative-2"></div>
+
+        <div class="hero__content">
+            <div class="semester-indicator">
+                <i class="fas fa-calendar-alt"></i>
+                Spring Semester 2025
+            </div>
+            
+            <h1 class="hero__title">Welcome to the Space University Course Management System</h1>
+            <p class="hero__subtitle">Access your academic journey through our comprehensive course management platform. Register for classes, view your schedule, and track your academic progress.</p>
+            
+            <div class="hero__cta">
+                <button class="btn btn-primary">
+                    <i class="fas fa-user"></i>
+                    <a href="auth_form.html" class="btn-link">Login to System</a>
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-user-plus"></i>
+                    <a href="auth_form.html" class="btn-link">New Registration</a>
+                </button>
+            </div>
+
+            <div class="quick-links">
+                <a href="#" class="quick-link">
+                    <i class="fas fa-book-open quick-link__icon"></i>
+                    <span class="quick-link__text">Course Catalog</span>
+                </a>
+                <a href="#" class="quick-link">
+                    <i class="fas fa-calendar-check quick-link__icon"></i>
+                    <span class="quick-link__text">Class Schedule</span>
+                </a>
+                <a href="#" class="quick-link">
+                    <i class="fas fa-graduation-cap quick-link__icon"></i>
+                    <span class="quick-link__text">Academic Records</span>
+                </a>
+                <a href="#" class="quick-link">
+                    <i class="fas fa-question-circle quick-link__icon"></i>
+                    <span class="quick-link__text">Registration Help</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero__academic-info">
+            <h2 class="section-title">Important Academic Dates</h2>
+            <div class="academic-calendar" id="academic-calendar">
+                <div class="calendar-item">
+                    <div class="calendar-date">
+                        <div class="calendar-date__day">15</div>
+                        <div class="calendar-date__month">Jan</div>
+                    </div>
+                    <div class="calendar-info">
+                        <div class="calendar-info__title">Spring Semester Begins</div>
+                        <div class="calendar-info__desc">First day of classes for Spring 2025</div>
+                    </div>
+                </div>
+                <div class="calendar-item">
+                    <div class="calendar-date">
+                        <div class="calendar-date__day">22</div>
+                        <div class="calendar-date__month">Jan</div>
+                    </div>
+                    <div class="calendar-info">
+                        <div class="calendar-info__title">Add/Drop Deadline</div>
+                        <div class="calendar-info__desc">Last day to modify course schedule without penalty</div>
+                    </div>
+                </div>
+                <div class="calendar-item">
+                    <div class="calendar-date">
+                        <div class="calendar-date__day">01</div>
+                        <div class="calendar-date__month">Feb</div>
+                    </div>
+                    <div class="calendar-info">
+                        <div class="calendar-info__title">Registration Opens</div>
+                        <div class="calendar-info__desc">Summer 2025 course registration begins</div>
+                    </div>
+                </div>
+                <div class="calendar-item">
+                    <div class="calendar-date">
+                        <div class="calendar-date__day">15</div>
+                        <div class="calendar-date__month">Mar</div>
+                    </div>
+                    <div class="calendar-info">
+                        <div class="calendar-info__title">Mid-Term Week</div>
+                        <div class="calendar-info__desc">Mid-semester examinations begin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources">
+        <div class="resources__container">
+            <div class="section-header">
+                <div class="section-subtitle">University Resources</div>
+                <h2 class="section-title">Essential Academic Resources</h2>
+                <p class="section-description">Access comprehensive information about campus facilities, departments, and academic schedules.</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Campus Buildings & Rooms -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Campus Buildings & Rooms</h3>
+                            <p class="resource-subtitle">Facility Information System</p>
+                        </div>
+                    </div>
+                    
+                    <p class="resource-description">Comprehensive database of campus facilities, including classrooms, laboratories, and study spaces.</p>
+                    
+                    <div class="resource-access">
+                        <i class="fas fa-universal-access"></i>
+                        <span>Available to all registered users</span>
+                    </div>
+
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-search"></i>
+                            <span class="resource-link__text">Search Facilities</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="resource-link__text">Interactive Map</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-calendar-check"></i>
+                            <span class="resource-link__text">Room Availability</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                    </div>
+
+                    <div class="integration-hint">
+                        <i class="fas fa-link"></i>
+                        Integrates with Class Schedule
+                    </div>
+                </div>
+
+                <!-- Department Directory -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Department Directory</h3>
+                            <p class="resource-subtitle">Academic Departments & Programs</p>
+                        </div>
+                    </div>
+                    
+                    <p class="resource-description">Complete listing of academic departments, programs, and administrative offices with contact information.</p>
+                    
+                    <div class="resource-access">
+                        <i class="fas fa-globe"></i>
+                        <span>Public Access</span>
+                    </div>
+
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-university"></i>
+                            <span class="resource-link__text">Browse Departments</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-phone"></i>
+                            <span class="resource-link__text">Contact Directory</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="resource-link__text">Program Information</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                    </div>
+
+                    <div class="integration-hint">
+                        <i class="fas fa-link"></i>
+                        Links to Course Catalog
+                    </div>
+                </div>
+
+                <!-- Academic Calendar -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Academic Calendar</h3>
+                            <p class="resource-subtitle">Important Dates & Deadlines</p>
+                        </div>
+                    </div>
+                    
+                    <p class="resource-description">Comprehensive academic calendar with key dates, registration periods, and university events.</p>
+                    
+                    <div class="resource-access">
+                        <i class="fas fa-globe"></i>
+                        <span>Public Access</span>
+                    </div>
+
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-calendar"></i>
+                            <span class="resource-link__text">View Full Calendar</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-clock"></i>
+                            <span class="resource-link__text">Important Deadlines</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-download"></i>
+                            <span class="resource-link__text">Download Calendar</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                    </div>
+
+                    <div class="integration-hint">
+                        <i class="fas fa-link"></i>
+                        Syncs with Personal Calendar
+                    </div>
+                </div>
+
+                <!-- Faculty Offices -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="resource-title-group">
+                            <h3 class="resource-title">Faculty Offices</h3>
+                            <p class="resource-subtitle">Professor Locations & Office Hours</p>
+                        </div>
+                    </div>
+                    
+                    <p class="resource-description">Locate faculty offices, view office hours, and schedule appointments with professors.</p>
+                    
+                    <div class="resource-access">
+                        <i class="fas fa-user-check"></i>
+                        <span>Requires Student Login</span>
+                    </div>
+
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-search"></i>
+                            <span class="resource-link__text">Find Professor</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-clock"></i>
+                            <span class="resource-link__text">Office Hours</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span class="resource-link__text">Schedule Meeting</span>
+                            <i class="fas fa-chevron-right resource-link__arrow"></i>
+                        </a>
+                    </div>
+                    
+
+                    <div class="integration-hint">
+                        <i class="fas fa-link"></i>
+                        Connected to Faculty Portal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features__container">
+            <div class="section-header">
+                <div class="section-subtitle">System Features</div>
+                <h2 class="section-title">Streamlined Academic Management</h2>
+                <p class="section-description">Experience our comprehensive suite of tools designed to enhance your academic journey at Space University.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Class Schedule Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h3 class="feature-title">Interactive Class Schedule</h3>
+                    <p class="feature-description">Dynamic scheduling interface with customizable views and real-time updates for your academic timetable.</p>
+
+                    <div class="feature-highlights">
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Weekly/Monthly Views
+                        </span>
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Calendar Sync
+                        </span>
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Conflict Detection
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Room Allocation Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Room Allocation</h3>
+                    <p class="feature-description">Efficient room management system with interactive maps and real-time availability tracking.</p>
+
+                    <div class="feature-highlights">
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Real-time Availability
+                        </span>
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Capacity Planning
+                        </span>
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Equipment Info
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Campus Map Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Interactive Campus Map</h3>
+                    <p class="feature-description">Navigate campus efficiently with our interactive map featuring building locations and optimal routes.</p>
+
+                    <div class="feature-highlights">
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            3D Building View
+                        </span>
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Route Planning
+                        </span>
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Location Services
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Registration Status Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="feature-title">Registration Progress</h3>
+                    <p class="feature-description">Track your registration status, course requirements, and enrollment progress in real-time.</p>
+     
+                    <div class="feature-highlights">
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Status Tracking
+                        </span>
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Requirement Check
+                        </span>
+                        <span class="feature-highlight">
+                            <i class="fas fa-check-circle"></i>
+                            Progress Alerts
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-support" id="help-support">
+        <div class="help-support__container">
+            <div class="help-support__content">
+                <!-- Left Column -->
+                <div class="help-info">
+                    <h2 class="help-info__title">Need Help? We're Here to Support You</h2>
+                    <p class="help-info__subtitle">Get assistance with registration, technical issues, or academic guidance</p>
+                    <p class="help-info__description">Our dedicated support team is available to help you navigate the course management system and ensure your academic success at Space University.</p>
+                    
+                    <div class="help-features">
+                        <div class="help-feature">
+                            <i class="fas fa-user-graduate"></i>
+                            <div class="help-feature__content">
+                                <h3>Registration Assistance</h3>
+                                <p>Get help with course enrollment, scheduling, and academic requirements</p>
+                            </div>
+                        </div>
+                        
+                        <div class="help-feature">
+                            <i class="fas fa-tools"></i>
+                            <div class="help-feature__content">
+                                <h3>Technical Support</h3>
+                                <p>Resolve system access issues and get technical troubleshooting</p>
+                            </div>
+                        </div>
+                        
+                        <div class="help-feature">
+                            <i class="fas fa-compass"></i>
+                            <div class="help-feature__content">
+                                <h3>Academic Advising</h3>
+                                <p>Connect with advisors for guidance on your academic journey</p>
+                            </div>
+                        </div>
+                        
+                        <div class="help-feature">
+                            <i class="fas fa-book-reader"></i>
+                            <div class="help-feature__content">
+                                <h3>System Guidance</h3>
+                                <p>Learn how to effectively use all system features and tools</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary help-info__cta">
+                        <i class="fas fa-info-circle"></i>
+                        Request More Information
+                    </button>
+                </div>
+
+                <!-- Right Column -->
+                <div class="help-resources">
+                    <div class="faq-preview" id="faq-preview">
+                        <h3 class="faq-preview__title">Frequently Asked Questions</h3>
+                        
+                        <div class="faq-questions">
+                            <div class="faq-question">
+                                <h4>How do I reset my password?</h4>
+                                <p>Follow our simple password reset process to regain access to your account</p>
+                            </div>
+                            
+                            <div class="faq-question">
+                                <h4>When can I register for courses?</h4>
+                                <p>Find important registration dates and deadlines for each semester</p>
+                            </div>
+                            
+                            <div class="faq-question">
+                                <h4>How do I access my course materials?</h4>
+                                <p>Learn to navigate the course management system and find your resources</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-secondary faq-preview__cta">
+                            <i class="fas fa-list-ul"></i>
+                            View All FAQs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated footer HTML -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- University Information -->
+            <div class="footer__column">
+                <div class="footer__logo">
+                    <svg class="logo-small" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="20" r="15" fill="#151C4C" stroke="#FF7C03" stroke-width="2"/>
+                        <ellipse cx="25" cy="20" rx="18" ry="8" fill="none" stroke="#FF7C03" stroke-width="1.5" transform="rotate(-15, 25, 20)"/>
+                    </svg>
+                </div>
+                <h3 class="footer__heading">Space University</h3>
+                <address class="footer__address">
+                    1000 Cosmic Drive<br>
+                    Stellar City, SP 12345<br>
+                    United Earth Federation
+                </address>
+                <div class="footer__contact">
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@spaceuniversity.edu</p>
+                </div>
+                <div class="footer__emergency">
+                    <h4>Emergency Contact</h4>
+                    <p><i class="fas fa-exclamation-triangle"></i> Campus Security: (555) 911-0000</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer__column">
+                <h3 class="footer__heading">Quick Links</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Course Catalog</a></li>
+                    <li><a href="#">Library Resources</a></li>
+                    <li><a href="#">Research Centers</a></li>
+                    <li><a href="#">Career Services</a></li>
+                    <li><a href="#">Campus Life</a></li>
+                    <li><a href="#">Alumni Network</a></li>
+                </ul>
+            </div>
+
+            <!-- Academic Resources -->
+            <div class="footer__column">
+                <h3 class="footer__heading">Academic Resources</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">Faculty Directory</a></li>
+                    <li><a href="#">Research Database</a></li>
+                    <li><a href="#">Online Learning</a></li>
+                    <li><a href="#">Academic Support</a></li>
+                    <li><a href="#">Writing Center</a></li>
+                    <li><a href="#">International Programs</a></li>
+                    <li><a href="#">Graduate Studies</a></li>
+                </ul>
+            </div>
+
+            
+
+            <!-- System Support -->
+            <div class="footer__column">
+                <h3 class="footer__heading">System Support</h3>
+                <div class="system-status">
+                    <div class="status-indicator">
+                        <span class="status-dot status-dot--online"></span>
+                        System Status: Online
+                    </div>
+                    <p class="last-update">Last Updated: 21 Jan 2025 14:30 UTC</p>
+                </div>
+                <ul class="footer__list">
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> User Guide</a></li>
+                    <li><a href="#"><i class="fas fa-tools"></i> Technical Support</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Security</a></li>
+                </ul>
+                <div class="footer__support">
+                    <p>24/7 Support:</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-HELP</p>
+                    <p><i class="fas fa-envelope"></i> support@spaceuniversity.edu</p>
+                </div>
+            </div>
+        </div>
+
+    
+        
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <div class="footer__container">
+                <div class="footer__info">
+                    <div class="footer__copyright">
+                        © 2025 Space University. All rights reserved.
+                    </div>
+                    <div class="footer__accreditation">
+                        Accredited by the Interplanetary Council of Higher Education
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

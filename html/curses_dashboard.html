@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space University - Student Dashboard</title>
+    <link rel="stylesheet" href="../css/course_dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <div class="logo-container">
+                <a href="landing_page.html">
+                    <img src="../images/logo.svg" alt="Space University Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav__links">
+                <li><a href="curses_dashboard.html" class="nav__link active">Home</a></li>
+                <li><a href="course_listing.html" class="nav__link">Courses</a></li>
+                <li><a href="schedule.html" class="nav__link">Schedule</a></li>
+                <li><a href="profile_student.html" class="nav__link">Profile</a></li>
+                <li><a href="auth_form.html" class="nav__link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-grid">
+            <!-- Left Column -->
+            <div class="dashboard-main">
+                <h2 class="section-title">My Courses</h2>
+                <div class="course-cards">
+                    <div class="course-card">
+                        <div class="course-card__header">
+                            <div>
+                                <h3 class="course-card__title">Human-Computer Interaction</h3>
+                                <p class="course-card__professor">Prof. Dr. Benjamin Weyers</p>
+                            </div>
+                            <span class="course-card__badge">In Progress</span>
+                        </div>
+                        <div class="course-card__info">
+                            <div class="course-card__detail">
+                                <strong>Room:</strong> H441
+                            </div>
+                            <div class="course-card__detail">
+                                <strong>Time:</strong> Mon 14:00
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-card__header">
+                            <div>
+                                <h3 class="course-card__title">Advanced Mathematics</h3>
+                                <p class="course-card__professor">Prof. Dr. Sarah Johnson</p>
+                            </div>
+                            <span class="course-card__badge">In Progress</span>
+                        </div>
+                        <div class="course-card__info">
+                            <div class="course-card__detail">
+                                <strong>Room:</strong> A202
+                            </div>
+                            <div class="course-card__detail">
+                                <strong>Time:</strong> Wed 10:00
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-card__header">
+                            <div>
+                                <h3 class="course-card__title">Software Engineering</h3>
+                                <p class="course-card__professor">Prof. Dr. Michael Chen</p>
+                            </div>
+                            <span class="course-card__badge">In Progress</span>
+                        </div>
+                        <div class="course-card__info">
+                            <div class="course-card__detail">
+                                <strong>Room:</strong> B301
+                            </div>
+                            <div class="course-card__detail">
+                                <strong>Time:</strong> Thu 15:30
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="dashboard-sidebar">
+                <div class="container_schedule">
+                    <h2 class="section-title">Weekly Schedule</h2>
+                    <div class="schedule">
+                        <a href="schedule.html" class="schedule-link">
+                        <div class="schedule-grid">
+                            <div class="schedule-header"></div>
+                            <div class="schedule-header">Mon</div>
+                            <div class="schedule-header">Tue</div>
+                            <div class="schedule-header">Wed</div>
+                            <div class="schedule-header">Thu</div>
+                            <div class="schedule-header">Fri</div>
+    
+                            <div class="schedule-time">09:00</div>
+                            <div class="schedule-cell"></div>
+                            <div class="schedule-cell"></div>
+                            <div class="schedule-cell">
+                                <div class="schedule-event">Advanced Mathematics</div>
+                            </div>
+                            <div class="schedule-cell"></div>
+                            <div class="schedule-cell"></div>
+    
+                            <div class="schedule-time">14:00</div>
+                            <div class="schedule-cell">
+                                <div class="schedule-event">HCI</div>
+                            </div>
+                            <div class="schedule-cell"></div>
+                            <div class="schedule-cell"></div>
+                            <div class="schedule-cell">
+                                <div class="schedule-event">Software Engineering</div>
+                            </div>
+                            <div class="schedule-cell"></div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="container_map">
+                    <h2 class="section-title">Campus Map</h2>
+                    <div class="room-map">
+                        <div class="map-placeholder">
+                            <img src="../images/uni_plan.png" alt="Campus Map" style="max-width: 100%; height: auto; border-radius: 8px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">University History</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Academics</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Student Life</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Campus Services</a></li>
+                    <li><a href="#">Student Organizations</a></li>
+                    <li><a href="#">Housing</a></li>
+                    <li><a href="#">Athletics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact">
+                    <p>Space University Campus</p>
+                    <p>1234 Cosmos Street</p>
+                    <p>Galaxy City, GC 12345</p>
+                    <p>Email: info@space.edu</p>
+                    <p>Tel: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2025 Space University. All rights reserved.
+            </div>
+            <div class="footer-social">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

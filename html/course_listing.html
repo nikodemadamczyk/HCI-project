@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space University - Course Listing</title>
+    <link rel="stylesheet" href="../css/course_listing.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <div class="logo-container">
+                <a href="landing_page.html">
+                    <img src="../images/logo.svg" alt="Space University Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav__links">
+                <li><a href="curses_dashboard.html" class="nav__link">Home</a></li>
+                <li><a href="course_listing.html" class="nav__link active">Courses</a></li>
+                <li><a href="schedule.html" class="nav__link">Schedule</a></li>
+                <li><a href="profile_student.html" class="nav__link">Profile</a></li>
+                <li><a href="auth_form.html" class="nav__link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="course-listing">
+        <div class="listing-header">
+            <h1 class="page-title">Available Courses</h1>
+            <div class="search-section">
+                <div class="search-bar">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search for courses...">
+                </div>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active">All Courses</button>
+                <button class="filter-btn">Computer Science</button>
+                <button class="filter-btn">Engineering</button>
+                <button class="filter-btn">Mathematics</button>
+                <button class="filter-btn">Available</button>
+            </div>
+        </div>
+
+        <div class="course-grid">
+            <!-- Course Card 1 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">Human-Computer Interaction</h2>
+                    <p class="course-professor">Prof. Dr. Benjamin Weyers</p>
+                </div>
+                <div class="course-content">
+                    <div class="course-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Department</div>
+                            <div class="detail-value">Computer Science</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Credits</div>
+                            <div class="detail-value">6 ECTS</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Schedule</div>
+                            <div class="detail-value">Wed 10:00-11:30</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Room</div>
+                            <div class="detail-value">A202</div>
+                        </div>
+                    </div>
+                    <p class="course-description">
+                        Advanced mathematical concepts including complex analysis, differential equations, and numerical methods.
+                    </p>
+                    <div class="course-actions">
+                        <button class="course-btn btn-primary">Enroll Now</button>
+                        <button class="course-btn btn-secondary">More Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">Software Engineering</h2>
+                    <p class="course-professor">Prof. Dr. Michael Chen</p>
+                </div>
+                <div class="course-content">
+                    <div class="course-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Department</div>
+                            <div class="detail-value">Computer Science</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Credits</div>
+                            <div class="detail-value">6 ECTS</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Schedule</div>
+                            <div class="detail-value">Thu 15:30-17:00</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Room</div>
+                            <div class="detail-value">B301</div>
+                        </div>
+                    </div>
+                    <p class="course-description">
+                        Learn modern software development practices, project management, and system architecture principles.
+                    </p>
+                    <div class="course-actions">
+                        <button class="course-btn btn-primary">Enroll Now</button>
+                        <button class="course-btn btn-secondary">More Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">Quantum Computing</h2>
+                    <p class="course-professor">Prof. Dr. Emily Martinez</p>
+                </div>
+                <div class="course-content">
+                    <div class="course-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Department</div>
+                            <div class="detail-value">Engineering</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Credits</div>
+                            <div class="detail-value">8 ECTS</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Schedule</div>
+                            <div class="detail-value">Fri 13:00-14:30</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Room</div>
+                            <div class="detail-value">Q101</div>
+                        </div>
+                    </div>
+                    <p class="course-description">
+                        Introduction to quantum computing principles, quantum algorithms, and quantum information theory.
+                    </p>
+                    <div class="course-actions">
+                        <button class="course-btn btn-primary">Enroll Now</button>
+                        <button class="course-btn btn-secondary">More Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">University History</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Academics</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Student Life</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Campus Services</a></li>
+                    <li><a href="#">Student Organizations</a></li>
+                    <li><a href="#">Housing</a></li>
+                    <li><a href="#">Athletics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact">
+                    <p>Space University Campus</p>
+                    <p>1234 Cosmos Street</p>
+                    <p>Galaxy City, GC 12345</p>
+                    <p>Email: info@space.edu</p>
+                    <p>Tel: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2025 Space University. All rights reserved.
+            </div>
+            <div class="footer-social">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

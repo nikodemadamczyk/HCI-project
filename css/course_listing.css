@@ -1,0 +1,218 @@
+@import 'base.css';
+
+main {
+    flex: 1;
+}
+
+/* Course Listing Styles */
+.course-listing {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.listing-header {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    color: var(--primary-navy);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.search-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    flex: 1;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.5rem;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: var(--primary-white);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 124, 3, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    width: 20px;
+    height: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-gray);
+    border-radius: 6px;
+    background: var(--primary-white);
+    color: var(--text-gray);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-orange);
+    color: var(--primary-orange);
+}
+
+.filter-btn.active {
+    background: var(--primary-orange);
+    color: var(--primary-white);
+    border-color: var(--primary-orange);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background: var(--primary-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-gray);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+    background: var(--primary-navy);
+    color: var(--primary-white);
+    padding: 1.5rem;
+}
+
+.course-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.course-professor {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    font-size: 0.875rem;
+}
+
+.detail-label {
+    color: var(--text-gray);
+    margin-bottom: 0.25rem;
+}
+
+.detail-value {
+    color: var(--primary-navy);
+    font-weight: 500;
+}
+
+.course-description {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.course-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.course-btn {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary-orange);
+    color: var(--primary-white);
+}
+
+.btn-primary:hover {
+    background: var(--light-orange);
+}
+
+.btn-secondary {
+    background: var(--light-gray);
+    color: var(--text-gray);
+}
+
+.btn-secondary:hover {
+    background: var(--border-gray);
+    color: var(--primary-navy);
+}
+
+/* Footer Styles */
+
+.footer-contact {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+}
+
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-orange);
+}
