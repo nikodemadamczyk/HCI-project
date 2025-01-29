@@ -1,0 +1,28 @@
+.navbar {
+    @apply bg-primary-dark py-6 px-8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav {
+    @apply flex items-center justify-between;
+  }
+  
+  .logo_container {
+    @apply flex items-center w-[200px] gap-4;
+  }
+  
+  .nav__links {
+    @apply flex gap-8 list-none m-0 p-0;
+  }
+  
+  .nav__link {
+    @apply text-white font-medium px-2 py-1 rounded transition-all duration-200 no-underline;
+  }
+  
+  .nav__link:hover {
+    @apply text-primary-orange bg-[rgba(255,124,3,0.1)];
+  }
+  
+  .nav__link.active {
+    @apply text-primary-orange bg-[rgba(255,124,3,0.15)];
+  }

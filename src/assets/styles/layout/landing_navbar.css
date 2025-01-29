@@ -1,0 +1,128 @@
+
+.navbar {
+    @apply bg-primary-dark py-6 px-8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav {
+    @apply flex items-center justify-between;
+  }
+  
+  .logo_container {
+    @apply flex items-center w-[200px] gap-4;
+  }
+  
+  .nav__links {
+    @apply flex gap-8 list-none m-0 p-0;
+  }
+  
+  .nav__link {
+    @apply text-white font-medium px-2 py-1 rounded transition-all duration-200 no-underline;
+  }
+  
+  .nav__link:hover {
+    @apply text-primary-orange;
+    background-color: rgba(255, 124, 3, 0.1);
+  }
+  
+  .nav__link.active {
+    @apply text-primary-orange;
+    background-color: rgba(255, 124, 3, 0.15);
+  }
+  
+  /* Landing Navbar specific styles */
+  .header {
+    @apply bg-primary-dark;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header__top {
+    @apply px-8 py-3 border-b border-dark-gray flex items-center justify-between;
+  }
+  
+  .search-container {
+    @apply flex items-center px-4 py-2 w-[400px] transition-all duration-200;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dark-gray);
+    border-radius: 0.375rem;
+  }
+  
+  .search-container:focus-within {
+    background-color: rgba(255, 255, 255, 0.1);
+    @apply border-primary-orange;
+  }
+  
+  .search-input {
+    @apply bg-transparent border-none text-white text-sm w-full px-2 outline-none;
+  }
+  
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .search-icon {
+    color: rgba(255, 255, 255, 0.5);
+    @apply text-sm;
+  }
+  
+  .header__bottom {
+    @apply px-8 flex justify-between items-center h-12;
+  }
+  
+  .nav-item {
+    @apply relative h-full flex items-center;
+  }
+  
+  .nav-link {
+    @apply text-white no-underline text-sm py-2 flex items-center gap-2 transition-colors duration-200;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .nav-link:hover {
+    @apply text-primary-orange;
+    background-color: rgba(255, 124, 3, 0.1);
+  }
+  
+  .nav-link.active {
+    @apply text-primary-orange;
+    background-color: rgba(255, 124, 3, 0.15);
+  }
+  
+  .dropdown {
+    @apply absolute top-full left-0 bg-medium-blue border border-dark-gray rounded-md min-w-[200px] opacity-0 invisible translate-y-2.5 transition-all duration-200 shadow-lg z-50;
+  }
+  
+  .nav-item:hover .dropdown {
+    @apply opacity-100 visible translate-y-0;
+  }
+  
+  .dropdown-item {
+    @apply block px-4 py-3 text-white no-underline text-sm transition-all duration-200;
+  }
+  
+  .dropdown-item:hover {
+    @apply text-primary-orange;
+    background-color: rgba(255, 124, 3, 0.1);
+  }
+  
+  .dropdown-item:not(:last-child) {
+    @apply border-b border-dark-gray;
+  }
+  
+  /* User menu styles */
+  .user-menu {
+    @apply flex items-center gap-6;
+  }
+  
+  .user-menu__item {
+    @apply text-white no-underline text-sm flex items-center gap-2 transition-colors duration-200;
+  }
+  
+  .user-menu__item:hover {
+    @apply text-primary-orange;
+  }
+  
+  .badge {
+    @apply bg-primary-orange text-white text-xs px-1.5 py-0.5 rounded-full ml-1;
+  }

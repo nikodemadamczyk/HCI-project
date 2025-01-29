@@ -1,0 +1,115 @@
+.course-listing {
+  @apply max-w-7xl mx-auto px-8 py-8;
+}
+
+.listing-header {
+  @apply mb-8;
+}
+
+.page-title {
+  @apply text-4xl font-bold text-primary-navy mb-4;
+}
+
+.search-section {
+  @apply flex gap-4 mb-8;
+}
+
+.search-bar {
+  @apply flex-1 relative;
+}
+
+.search-input {
+  @apply w-full px-4 py-3.5 pl-10 border-2 border-border-gray rounded-lg text-base transition-all duration-200 bg-white;
+}
+
+.search-input:focus {
+  @apply outline-none border-primary-orange shadow-[0_0_0_3px_rgba(255,124,3,0.1)];
+}
+
+.search-icon {
+  @apply absolute left-3.5 top-1/2 -translate-y-1/2 text-text-gray w-5 h-5;
+}
+
+.filters {
+  @apply flex gap-4 mb-8;
+}
+
+.filter-btn {
+  @apply px-4 py-2 border-2 border-border-gray rounded-md bg-white text-text-gray font-medium cursor-pointer transition-all duration-200;
+}
+
+.filter-btn:hover {
+  @apply border-primary-orange text-primary-orange;
+}
+
+.filter-btn.active {
+  @apply bg-primary-orange text-white border-primary-orange;
+}
+
+.course-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.course-card {
+  @apply bg-white rounded-xl overflow-hidden shadow-sm border border-border-gray transition-all duration-200 hover:shadow-md hover:-translate-y-0.5;
+}
+
+.course-header {
+  @apply bg-primary-navy text-white p-6;
+}
+
+.course-title {
+  @apply text-xl font-semibold mb-2;
+}
+
+.course-professor {
+  @apply text-sm opacity-90;
+}
+
+.course-content {
+  @apply p-6;
+}
+
+.course-details {
+  @apply grid grid-cols-2 gap-4 mb-6;
+}
+
+.detail-item {
+  @apply text-sm;
+}
+
+.detail-label {
+  @apply text-text-gray mb-1;
+}
+
+.detail-value {
+  @apply text-primary-navy font-medium;
+}
+
+.course-description {
+  @apply text-text-gray text-sm leading-relaxed mb-6;
+}
+
+.course-actions {
+  @apply flex gap-4;
+}
+
+.course-btn {
+  @apply px-4 py-3 rounded-md font-medium cursor-pointer transition-all duration-200 flex-1 border-none;
+}
+
+.btn-primary {
+  @apply bg-primary-orange text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-light-orange;
+}
+
+.btn-secondary {
+  @apply bg-light-gray text-text-gray;
+}
+
+.btn-secondary:hover {
+  @apply bg-border-gray text-primary-navy;
+}

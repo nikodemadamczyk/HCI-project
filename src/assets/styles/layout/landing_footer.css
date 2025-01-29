@@ -1,0 +1,125 @@
+.footer {
+    @apply bg-primary-dark text-white pt-16;
+    border-top: 1px solid var(--dark-gray);
+  }
+  
+  .footer__container {
+    @apply max-w-7xl mx-auto px-8 grid grid-cols-4 gap-12;
+  }
+  
+  .footer__column {
+    @apply flex flex-col gap-5;
+  }
+  
+  .footer__logo {
+    @apply mb-4;
+  }
+  
+  .logo-small {
+    @apply w-[120px] h-6;
+  }
+  
+  .footer__heading {
+    @apply text-white text-lg font-semibold mb-4 relative pb-3;
+  }
+  
+  .footer__heading::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-10 h-0.5 bg-primary-orange;
+  }
+  
+  .footer__address {
+    @apply not-italic text-sm leading-relaxed text-[rgba(255,255,255,0.7)];
+  }
+  
+  .footer__contact {
+    @apply flex flex-col gap-2 text-sm text-[rgba(255,255,255,0.7)];
+  }
+  
+  .footer__contact i {
+    @apply text-primary-orange w-5;
+  }
+  
+  .footer__emergency {
+    @apply border-t border-dark-gray pt-4;
+  }
+  
+    .footer__emergency h4 {
+      @apply text-sm font-semibold mb-2 text-primary-orange;
+    }
+  
+    .footer__emergency p {
+      @apply text-sm flex items-center gap-2;
+    }
+  
+    .footer__list {
+      @apply list-none flex flex-col gap-3;
+    }
+  
+    .footer__list a {
+      @apply text-[rgba(255,255,255,0.7)] no-underline text-sm transition-colors duration-200 inline-flex items-center gap-2;
+    }
+  
+    .footer__list a:hover {
+      @apply text-primary-orange translate-x-1;
+    }
+  
+    .system-status {
+      @apply bg-[rgba(255,255,255,0.05)] p-4 rounded-lg mb-4;
+    }
+  
+    .status-indicator {
+      @apply flex items-center gap-2 text-sm mb-2;
+    }
+  
+    .status-dot {
+      @apply w-2 h-2 rounded-full bg-success-green;
+    }
+  
+    .status-dot--online {
+      box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    }
+  
+    .last-update {
+      @apply text-xs text-[rgba(255,255,255,0.5)];
+    }
+  
+    .footer__support {
+      @apply border-t border-dark-gray pt-4 text-sm text-[rgba(255,255,255,0.7)];
+    }
+  
+    .footer__support p {
+      @apply flex items-center gap-2 mb-2;
+    }
+  
+    .footer__bottom {
+      @apply mt-16 py-6 border-t border-dark-gray;
+    }
+  
+    .footer__bottom .footer__container {
+      @apply flex justify-between items-center;
+    }
+  
+    .footer__info {
+      @apply flex flex-col gap-2;
+    }
+  
+    .footer__copyright {
+      @apply text-sm text-[rgba(255,255,255,0.7)];
+    }
+  
+    .footer__accreditation {
+      @apply text-xs text-[rgba(255,255,255,0.5)];
+    }
+  
+    .footer__links {
+      @apply flex gap-8;
+    }
+  
+    .footer__links a {
+      @apply text-[rgba(255,255,255,0.7)] no-underline text-sm transition-colors duration-200;
+    }
+  
+    .footer__links a:hover {
+      @apply text-primary-orange;
+    }
