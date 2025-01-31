@@ -40,7 +40,7 @@
 }
 
 .section-title {
-    @apply text-primary-navy text-xl font-semibold mb-6 pb-4 border-b-2 border-border-gray;
+    @apply text-primary-navy text-xl font-semibold mb-6 pb-4 border-b-2 border-border-gray mt-6;
 }
 
 .section-content {
@@ -96,6 +96,10 @@
 
 .room-map {
     @apply w-full h-52 bg-border-gray rounded-md flex items-center justify-center text-text-gray mt-4;
+}
+
+.room-map img {
+    @apply w-full h-full object-cover rounded-md;
 }
 
 .enrollment-section {

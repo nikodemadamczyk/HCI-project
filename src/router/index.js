@@ -24,8 +24,26 @@ const router = createRouter({
       path: '/schedule',
       name: 'schedule',
       component: () => import('../views/Schedule.vue')
+    },
+    {
+        path: '/auth',
+        name: 'auth',
+        component: () => import('../views/Auth.vue')
+    },
+    {
+        path: '/auth',
+        name: 'auth',
+        component: () => import('@/views/Auth.vue')
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import('../views/CourseDashboard.vue'),
+      meta: { requiresAuth: true }
     }
   ]
 })
+
+
 
 export default router

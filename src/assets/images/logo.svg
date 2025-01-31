@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Planet Circle -->
+  <circle cx="25" cy="20" r="15" fill="#151C4C" stroke="#FF7C03" stroke-width="2"/>
+  
+  <!-- Orbit Ring -->
+  <ellipse cx="25" cy="20" rx="18" ry="8" fill="none" stroke="#FF7C03" stroke-width="1.5" transform="rotate(-15, 25, 20)"/>
+  
+  <!-- Text -->
+  <text x="55" y="27" fill="#FFFFFF" font-family="system-ui, -apple-system, Arial" font-size="18" font-weight="600">Space University</text>
+</svg>

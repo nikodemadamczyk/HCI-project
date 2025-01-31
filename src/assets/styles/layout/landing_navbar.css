@@ -8,6 +8,14 @@
     @apply flex items-center justify-between;
   }
   
+  .logo {
+    @apply flex items-center;
+  }
+
+  .logo img {
+    @apply h-10 w-auto;
+  }
+
   .logo_container {
     @apply flex items-center w-[200px] gap-4;
   }
@@ -125,4 +133,8 @@
   
   .badge {
     @apply bg-primary-orange text-white text-xs px-1.5 py-0.5 rounded-full ml-1;
+  }
+
+  .user-menu__item {
+    @apply flex items-center gap-2 text-text-gray hover:text-primary-orange transition-colors;
   }

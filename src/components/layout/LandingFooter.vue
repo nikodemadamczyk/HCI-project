@@ -5,11 +5,7 @@
       <div class="footer__column">
         <div class="footer__logo">
           <div class="logo-small">
-            <!-- Logo SVG will be replaced with proper asset -->
-            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25" cy="20" r="15" fill="#151C4C" stroke="#FF7C03" stroke-width="2"/>
-              <ellipse cx="25" cy="20" rx="18" ry="8" fill="none" stroke="#FF7C03" stroke-width="1.5" transform="rotate(-15, 25, 20)"/>
-            </svg>
+            <img src="../../assets/images/logo.svg" alt="Space University">
           </div>
         </div>
         <h3 class="footer__heading">Space University</h3>
@@ -32,14 +28,14 @@
       <div class="footer__column">
         <h3 class="footer__heading">Quick Links</h3>
         <ul class="footer__list">
-          <li><a href="#">Admissions</a></li>
-          <li><a href="#">Academic Calendar</a></li>
-          <li><a href="#">Course Catalog</a></li>
-          <li><a href="#">Library Resources</a></li>
-          <li><a href="#">Research Centers</a></li>
-          <li><a href="#">Career Services</a></li>
-          <li><a href="#">Campus Life</a></li>
-          <li><a href="#">Alumni Network</a></li>
+          <li><router-link to="/admissions">Admissions</router-link></li>
+          <li><router-link to="/schedule">Academic Calendar</router-link></li>
+          <li><router-link to="/courses">Course Catalog</router-link></li>
+          <li><router-link to="/library">Library Resources</router-link></li>
+          <li><router-link to="/research">Research Centers</router-link></li>
+          <li><router-link to="/career">Career Services</router-link></li>
+          <li><router-link to="/campus">Campus Life</router-link></li>
+          <li><router-link to="/alumni">Alumni Network</router-link></li>
         </ul>
       </div>
 

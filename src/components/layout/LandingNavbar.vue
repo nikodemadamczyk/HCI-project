@@ -2,8 +2,9 @@
   <header class="header">
     <div class="header__top">
       <div class="logo-container">
-        <!-- Logo will be added later with proper asset -->
-        <div class="text-primary-orange text-2xl font-bold">Space University</div>
+        <router-link to="/" class="logo">
+          <img src="../../assets/images/logo.svg" alt="Space University">
+        </router-link>
       </div>
       <div class="search-container">
         <i class="fas fa-search search-icon"></i>
@@ -15,32 +16,38 @@
           <i class="far fa-bell"></i>
           <span class="badge">3</span>
         </a>
-        <a href="#" class="user-menu__item">
-          <i class="far fa-user"></i>
-          <span>My Account</span>
-        </a>
+        <div v-if="!isAuthenticated">
+          <router-link to="/auth" class="user-menu__item">
+            <i class="far fa-user"></i>
+            <span>My Account</span>
+          </router-link>
+        </div>
+        <div v-else>
+          <a href="#" class="user-menu__item" @click="logout">
+            <i class="far fa-user"></i>
+            <span>Logout</span>
+          </a>
+        </div>
       </div>
     </div>
 
     <nav class="header__bottom">
       <div class="nav">
         <div class="nav-item">
-          <a href="#" class="nav-link active">
-            Dashboard
-          </a>
+          <router-link to="/dashboard" class="dropdown-item">Dashboard</router-link>
         </div>
         
         <div class="nav-item">
-          <a href="#" class="nav-link">
-            Courses
-            <i class="fas fa-chevron-down"></i>
-          </a>
-          <div class="dropdown">
-            <a href="#" class="dropdown-item">Browse All Courses</a>
-            <a href="#" class="dropdown-item">My Enrolled Courses</a>
-            <a href="#" class="dropdown-item">Course Calendar</a>
-            <a href="#" class="dropdown-item">Course Catalog</a>
-          </div>
+            <a href="#" class="nav-link">
+                Courses
+                <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown">
+                <router-link to="/courses" class="dropdown-item">Browse All Courses</router-link>
+                <router-link to="/courses?filter=enrolled" class="dropdown-item">My Enrolled Courses</router-link>
+                <router-link to="/schedule" class="dropdown-item">Course Calendar</router-link>
+                <router-link to="/courses?view=catalog" class="dropdown-item">Course Catalog</router-link>
+            </div>
         </div>
 
         <div class="nav-item">
@@ -73,6 +80,32 @@
   </header>
 </template>
 
+<script>
+import { useAuthStore } from '@/stores/authStore'
+import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+
+export default {
+  name: 'LandingNavbar',
+  setup() {
+    const authStore = useAuthStore()
+    const router = useRouter()
+
+    const isAuthenticated = computed(() => authStore.isAuthenticated)
+
+    const logout = async () => {
+      await authStore.logout()
+      router.push('/')
+    }
+
+    return {
+      isAuthenticated,
+      logout
+    }
+  }
+}
+</script>
+
 <style scoped>
-    @import '../../assets/styles/layout/landing_navbar.css';
+@import '../../assets/styles/layout/landing_navbar.css';
 </style>

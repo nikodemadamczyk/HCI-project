@@ -1,3 +1,4 @@
+
 <template>
   <section class="hero">
     <div class="decorative-element decorative-1"></div>
@@ -11,27 +12,26 @@
       
       <h1 class="hero__title">Welcome to the Space University Course Management System</h1>
       <p class="hero__subtitle">Access your academic journey through our comprehensive course management platform. Register for classes, view your schedule, and track your academic progress.</p>
-      
-      <div class="hero__cta">
-        <button class="btn btn-primary">
-          <i class="fas fa-user"></i>
-          Login to System
-        </button>
-        <button class="btn btn-secondary">
-          <i class="fas fa-user-plus"></i>
-          New Registration
-        </button>
-      </div>
+    <div class="hero__cta">
+      <router-link to="/auth" class="btn btn-primary">
+        <i class="fas fa-user"></i>
+        Login to System
+      </router-link>
+      <router-link to="/auth" class="btn btn-secondary">
+        <i class="fas fa-user-plus"></i>
+        New Registration
+      </router-link>
+    </div>
 
       <div class="quick-links">
-        <a href="#" class="quick-link">
+        <router-link to="/courses" class="quick-link">
           <i class="fas fa-book-open quick-link__icon"></i>
           <span class="quick-link__text">Course Catalog</span>
-        </a>
-        <a href="#" class="quick-link">
+        </router-link>
+        <router-link to="/schedule" class="quick-link">
           <i class="fas fa-calendar-check quick-link__icon"></i>
           <span class="quick-link__text">Class Schedule</span>
-        </a>
+        </router-link>
         <a href="#" class="quick-link">
           <i class="fas fa-graduation-cap quick-link__icon"></i>
           <span class="quick-link__text">Academic Records</span>
