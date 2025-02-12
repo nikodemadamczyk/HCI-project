@@ -1,4 +1,4 @@
-// src/views/Auth.vue
+# src/views/Auth.vue
 <template>
   <div class="flex flex-col justify-center items-center px-8 py-16 min-h-[calc(100vh-180px)]">
     <div class="w-full max-w-lg">
@@ -50,8 +50,13 @@ const activeForm = ref('login')
 
 const handleLogin = async (credentials) => {
   try {
-    await authStore.login(credentials)
-    router.push('/dashboard') 
+    const user = await authStore.login(credentials)
+    // Przekieruj do odpowiedniego dashboardu
+    if (user.role === 'teacher') {
+      router.push('/faculty/dashboard')
+    } else {
+      router.push('/dashboard')
+    }
   } catch (error) {
     alert(error.message)
   }
@@ -67,3 +72,7 @@ const handleRegister = async (userData) => {
   }
 }
 </script>
+
+<style scoped>
+@import '@/assets/styles/views/auth.css';
+</style>

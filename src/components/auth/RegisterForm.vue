@@ -1,3 +1,4 @@
+# src/components/auth/RegisterForm.vue
 <template>
   <div class="w-full">
     <div class="text-center mb-10">
@@ -11,20 +12,10 @@
         <input 
           type="text" 
           id="register-name" 
-          class="w-full h-12 px-4 border-2 border-border-gray rounded-lg focus:outline-none focus:border-primary-orange focus:ring-2 focus:ring-primary-orange focus:ring-opacity-10"
-          :class="{ 
-            'border-error-red': v$.fullName.$error,
-            'border-success-green': !v$.fullName.$error && formData.fullName 
-          }"
+          class="form-input"
           v-model="formData.fullName" 
           placeholder="John Doe"
         >
-        <span v-if="v$.fullName.$error" class="text-error-red text-sm mt-1 block">
-          {{ v$.fullName.$errors[0].$message }}
-        </span>
-        <span v-else-if="formData.fullName" class="text-success-green text-sm mt-1 block">
-          Looks good!
-        </span>
       </div>
 
       <div>
@@ -32,14 +23,34 @@
         <input 
           type="email" 
           id="register-email" 
-          class="w-full h-12 px-4 border-2 border-border-gray rounded-lg focus:outline-none focus:border-primary-orange focus:ring-2 focus:ring-primary-orange focus:ring-opacity-10"
-          :class="{ 'border-error-red': v$.email.$error }"
+          class="form-input"
           v-model="formData.email" 
           placeholder="you@example.com"
         >
-        <span v-if="v$.email.$error" class="text-error-red text-sm mt-1 block">
-          {{ v$.email.$errors[0].$message }}
-        </span>
+      </div>
+      
+      <div>
+        <label class="block text-primary-navy font-medium mb-2">Role</label>
+        <div class="flex gap-4">
+          <label class="inline-flex items-center">
+            <input 
+              type="radio" 
+              v-model="formData.role" 
+              value="student"
+              class="form-radio text-primary-orange"
+            >
+            <span class="ml-2">Student</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input 
+              type="radio" 
+              v-model="formData.role" 
+              value="teacher"
+              class="form-radio text-primary-orange"
+            >
+            <span class="ml-2">Teacher</span>
+          </label>
+        </div>
       </div>
       
       <div>
@@ -47,14 +58,10 @@
         <input 
           type="password" 
           id="register-password" 
-          class="w-full h-12 px-4 border-2 border-border-gray rounded-lg focus:outline-none focus:border-primary-orange focus:ring-2 focus:ring-primary-orange focus:ring-opacity-10"
-          :class="{ 'border-error-red': v$.password.$error }"
+          class="form-input"
           v-model="formData.password" 
           placeholder="Create a password"
         >
-        <span v-if="v$.password.$error" class="text-error-red text-sm mt-1 block">
-          {{ v$.password.$errors[0].$message }}
-        </span>
       </div>
       
       <div>
@@ -62,19 +69,15 @@
         <input 
           type="password" 
           id="register-confirm" 
-          class="w-full h-12 px-4 border-2 border-border-gray rounded-lg focus:outline-none focus:border-primary-orange focus:ring-2 focus:ring-primary-orange focus:ring-opacity-10"
-          :class="{ 'border-error-red': v$.confirmPassword.$error }"
+          class="form-input"
           v-model="formData.confirmPassword" 
           placeholder="Confirm your password"
         >
-        <span v-if="v$.confirmPassword.$error" class="text-error-red text-sm mt-1 block">
-          {{ v$.confirmPassword.$errors[0].$message }}
-        </span>
       </div>
       
       <button 
         type="submit" 
-        class="w-full h-12 bg-primary-orange text-primary-white font-semibold rounded-lg hover:bg-light-orange transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+        class="btn btn-primary w-full"
         :disabled="isSubmitting"
       >
         {{ isSubmitting ? 'Creating Account...' : 'Create Account' }}
@@ -84,45 +87,42 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
-import { useVuelidate } from '@vuelidate/core'
-import { required, email, minLength, sameAs } from '@vuelidate/validators'
+import { ref } from 'vue'
 
 const emit = defineEmits(['submit'])
 const isSubmitting = ref(false)
 
-const formData = reactive({
+const formData = ref({
   fullName: '',
   email: '',
   password: '',
-  confirmPassword: ''
+  confirmPassword: '',
+  role: 'student' // Default role
 })
 
-const rules = {
-  fullName: { required, minLength: minLength(3) },
-  email: { required, email },
-  password: { required, minLength: minLength(8) },
-  confirmPassword: { 
-    required,
-    sameAsPassword: (value) => value === formData.password || 'Passwords must match'
-  }
-}
-
-const v$ = useVuelidate(rules, formData)
-
 const handleSubmit = async () => {
-  const isValid = await v$.value.$validate()
-  if (!isValid) return
-  
+  if (formData.value.password !== formData.value.confirmPassword) {
+    alert('Passwords do not match')
+    return
+  }
+
   isSubmitting.value = true
   try {
-    await emit('submit', { ...formData })
-    alert('Account created successfully! You can now log in.')
+    await emit('submit', { ...formData.value })
   } catch (error) {
-    alert(error.message)
+    console.error('Registration error:', error)
   } finally {
     isSubmitting.value = false
   }
 }
-
 </script>
+
+<style scoped>
+.form-input {
+  @apply w-full px-4 py-2 border-2 border-border-gray rounded-lg focus:outline-none focus:border-primary-orange;
+}
+
+.form-radio {
+  @apply text-primary-orange focus:ring-primary-orange;
+}
+</style>

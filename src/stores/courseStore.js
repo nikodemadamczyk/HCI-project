@@ -532,7 +532,43 @@ export const useCourseStore = defineStore('courses', {
         available: false
       }
     ],
-    enrollments: JSON.parse(localStorage.getItem('enrollments')) || []
+    enrollments: JSON.parse(localStorage.getItem('enrollments')) || [],
+    courseStudents: {
+      1: [
+        {
+          id: 1,
+          name: 'John Doe',
+          studentId: 'ST2024001',
+          email: 'john.doe@student.space-university.edu',
+          status: 'active'
+        },
+        {
+          id: 2,
+          name: 'Jane Smith',
+          studentId: 'ST2024002',
+          email: 'jane.smith@student.space-university.edu',
+          status: 'active'
+        }
+      ]
+    },
+    courseMaterials: {
+      1: [
+        {
+          id: 1,
+          name: 'Lecture 1 - Introduction to HCI.pdf',
+          type: 'pdf',
+          size: '2.5 MB',
+          uploadedAt: '2025-01-15'
+        },
+        {
+          id: 2,
+          name: 'Week 1 - Tutorial Materials.zip',
+          type: 'zip',
+          size: '15.2 MB',
+          uploadedAt: '2025-01-15'
+        }
+      ]
+    }
   }),
   
   getters: {
@@ -558,6 +594,18 @@ export const useCourseStore = defineStore('courses', {
         const [courseDay, courseTime] = course.schedule.split(' ')
         return courseDay === day && courseTime === time
       })
+    },
+    
+    getTeacherCourses: (state) => (teacherId) => {
+      return state.courses.filter(course => course.instructor.id === teacherId)
+    },
+
+    getCourseStudents: (state) => (courseId) => {
+      return state.courseStudents[courseId] || []
+    },
+
+    getCourseMaterials: (state) => (courseId) => {
+      return state.courseMaterials[courseId] || []
     }
   },
   
@@ -619,6 +667,70 @@ export const useCourseStore = defineStore('courses', {
       }
   
       localStorage.setItem('enrollments', JSON.stringify(this.enrollments))
+    },
+
+    async updateCourse(courseId, courseData) {
+      const index = this.courses.findIndex(c => c.id === courseId)
+      if (index !== -1) {
+        this.courses[index] = { ...this.courses[index], ...courseData }
+        return this.courses[index]
+      }
+      throw new Error('Course not found')
+    },
+
+    async addStudentToCourse(courseId, studentData) {
+      if (!this.courseStudents[courseId]) {
+        this.courseStudents[courseId] = []
+      }
+      const newStudent = {
+        id: Date.now(),
+        ...studentData,
+        status: 'active'
+      }
+      this.courseStudents[courseId].push(newStudent)
+      return newStudent
+    },
+
+    async removeStudentFromCourse(courseId, studentId) {
+      if (this.courseStudents[courseId]) {
+        this.courseStudents[courseId] = this.courseStudents[courseId].filter(
+          s => s.id !== studentId
+        )
+      }
+    },
+
+    async addCourseMaterial(courseId, materialData) {
+      if (!this.courseMaterials[courseId]) {
+        this.courseMaterials[courseId] = []
+      }
+      const newMaterial = {
+        id: Date.now(),
+        ...materialData,
+        uploadedAt: new Date().toISOString().split('T')[0]
+      }
+      this.courseMaterials[courseId].push(newMaterial)
+      return newMaterial
+    },
+
+    async deleteCourseMaterial(courseId, materialId) {
+      if (this.courseMaterials[courseId]) {
+        this.courseMaterials[courseId] = this.courseMaterials[courseId].filter(
+          m => m.id !== materialId
+        )
+      }
+    },
+
+    async createCourse(courseData) {
+      const newCourse = {
+        id: this.courses.length + 1,
+        ...courseData,
+        enrollment: {
+          remaining: courseData.maxStudents,
+          total: courseData.maxStudents
+        }
+      }
+      this.courses.push(newCourse)
+      return newCourse
     }
   }
 })

@@ -2,25 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-dark: #00060D;
-  --primary-navy: #151C4C;
-  --primary-orange: #FF7C03;
-  --primary-white: #FFFFFF;
-  --dark-gray: #141414;
-  --medium-dark: #1E1E1E;
-  --dark-blue: #1F2656;
-  --medium-blue: #293060;
-  --light-orange: #FF9017;
-  --border-gray: #E5E7EB;
-  --text-gray: #6B7280;
-  --light-gray: #F3F4F6;
-  --success-green: #059669;
-  --error-red: #DC2626;
+@layer base {
+  :root {
+    --primary-dark: #00060D;
+    --primary-navy: #151C4C;
+    --primary-orange: #FF7C03;
+    --primary-white: #FFFFFF;
+    --dark-gray: #141414;
+    --medium-dark: #1E1E1E;
+    --dark-blue: #1F2656;
+    --medium-blue: #293060;
+    --light-orange: #FF9017;
+    --border-gray: #E5E7EB;
+    --text-gray: #6B7280;
+    --light-gray: #F3F4F6;
+    --success-green: #059669;
+    --error-red: #DC2626;
+  }
+
+  body {
+    @apply bg-light-gray min-h-screen;
+  }
 }
 
-body {
-  @apply bg-light-gray;
-  min-height: 100vh;
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-primary-orange text-white hover:bg-light-orange;
+  }
+
+  .btn-secondary {
+    @apply bg-light-gray text-text-gray hover:bg-border-gray hover:text-primary-navy;
+  }
 }
 
+@layer utilities {
+  .hero-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}

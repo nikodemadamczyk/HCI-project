@@ -1,0 +1,117 @@
+/* Common Dashboard Styles */
+@layer components {
+    .dashboard-container {
+      @apply max-w-7xl mx-auto px-8 py-8;
+    }
+  
+    .dashboard-header {
+      @apply bg-white rounded-xl shadow-sm p-6 mb-8;
+    }
+  
+    .dashboard-title {
+      @apply text-2xl font-semibold text-primary-navy mb-2;
+    }
+  
+    .dashboard-subtitle {
+      @apply text-text-gray;
+    }
+  
+    .dashboard-grid {
+      @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+    }
+  
+    .dashboard-main {
+      @apply lg:col-span-2;
+    }
+  
+    .dashboard-sidebar {
+      @apply lg:col-span-1;
+    }
+  
+    /* Cards */
+    .card {
+      @apply bg-white rounded-xl shadow-sm p-6;
+    }
+  
+    .card-header {
+      @apply flex justify-between items-start mb-6;
+    }
+  
+    .card-title {
+      @apply text-lg font-semibold text-primary-navy mb-1;
+    }
+  
+    .card-subtitle {
+      @apply text-sm text-text-gray;
+    }
+  
+    /* Buttons */
+    .btn {
+      @apply px-4 py-2 rounded-lg font-medium transition-colors inline-flex items-center gap-2;
+    }
+  
+    .btn-primary {
+      @apply bg-primary-orange text-white hover:bg-light-orange;
+    }
+  
+    .btn-secondary {
+      @apply bg-light-gray text-text-gray hover:bg-border-gray hover:text-primary-navy;
+    }
+  
+    /* Forms */
+    .form-group {
+      @apply mb-6;
+    }
+  
+    .form-label {
+      @apply block text-sm font-medium text-primary-navy mb-2;
+    }
+  
+    .form-input {
+      @apply w-full px-4 py-2 border border-border-gray rounded-lg focus:outline-none focus:border-primary-orange transition-colors;
+    }
+  
+    .form-select {
+      @apply w-full px-4 py-2 border border-border-gray rounded-lg focus:outline-none focus:border-primary-orange transition-colors appearance-none bg-white;
+    }
+  
+    /* Status Badges */
+    .status-badge {
+      @apply px-3 py-1 rounded-full text-sm font-medium;
+    }
+  
+    .status-badge-success {
+      @apply bg-success-green/10 text-success-green;
+    }
+  
+    .status-badge-error {
+      @apply bg-error-red/10 text-error-red;
+    }
+  
+    /* Tables */
+    .table-container {
+      @apply overflow-x-auto;
+    }
+  
+    .table {
+      @apply min-w-full;
+    }
+  
+    .table th {
+      @apply text-left py-4 px-4 text-sm font-medium text-primary-navy border-b border-border-gray;
+    }
+  
+    .table td {
+      @apply py-4 px-4 border-b border-border-gray;
+    }
+  
+    /* Icons */
+    .icon-btn {
+      @apply p-2 rounded-lg text-text-gray hover:bg-light-gray transition-colors;
+    }
+  
+    /* Profile */
+    .profile-avatar {
+      @apply w-16 h-16 rounded-full bg-primary-orange/10 text-primary-orange flex items-center justify-center text-xl font-semibold;
+    }
+  }

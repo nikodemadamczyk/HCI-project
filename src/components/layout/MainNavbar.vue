@@ -16,7 +16,7 @@
           <router-link to="/schedule" class="nav__link" :class="{ 'active': currentRoute === '/schedule' }">Schedule</router-link>
         </li>
         <li v-if="authStore.isAuthenticated">
-          <router-link to="/profile" class="nav__link" :class="{ 'active': currentRoute === '/profile' }">Profile</router-link></li>
+          <router-link to="/profile" class="nav__link" :class="{ 'active': currentRoute === '/profile/student' }">Profile</router-link></li>
         <li>
           <router-link 
             v-if="!authStore.isAuthenticated"

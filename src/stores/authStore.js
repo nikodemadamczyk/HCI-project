@@ -1,4 +1,3 @@
-// src/stores/authStore.js
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
@@ -7,6 +6,8 @@ export const useAuthStore = defineStore('auth', () => {
   const users = ref(JSON.parse(localStorage.getItem('users')) || [])
 
   const isAuthenticated = computed(() => !!user.value)
+  const isTeacher = computed(() => user.value?.role === 'teacher')
+  const isStudent = computed(() => user.value?.role === 'student')
 
   const register = async (userData) => {
     // Sprawdź czy użytkownik już istnieje
@@ -20,7 +21,8 @@ export const useAuthStore = defineStore('auth', () => {
       id: Date.now(),
       fullName: userData.fullName,
       email: userData.email,
-      password: userData.password // W prawdziwej aplikacji należy zahashować hasło!
+      role: userData.role,
+      password: userData.password // W prawdziwej aplikacji hasło powinno być zahashowane!
     }
 
     // Dodaj do listy użytkowników
@@ -43,7 +45,8 @@ export const useAuthStore = defineStore('auth', () => {
     const loggedUser = {
       id: foundUser.id,
       email: foundUser.email,
-      fullName: foundUser.fullName
+      fullName: foundUser.fullName,
+      role: foundUser.role
     }
     
     user.value = loggedUser
@@ -60,6 +63,8 @@ export const useAuthStore = defineStore('auth', () => {
   return {
     user,
     isAuthenticated,
+    isTeacher,
+    isStudent,
     register,
     login,
     logout

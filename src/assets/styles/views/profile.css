@@ -1,0 +1,159 @@
+/* Settings Container */
+.settings-container {
+    @apply flex gap-8 max-w-7xl mx-auto px-8 py-8;
+  }
+  
+  /* Settings Navigation */
+  .settings-nav {
+    @apply w-64 flex-shrink-0 bg-white rounded-lg p-6 shadow-sm h-fit;
+  }
+  
+  .settings-nav-title {
+    @apply text-xl font-semibold text-primary-navy mb-6;
+  }
+  
+  .settings-nav-list {
+    @apply space-y-1;
+  }
+  
+  .settings-nav-item {
+    @apply w-full;
+  }
+  
+  .settings-nav-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-text-gray transition-colors w-full hover:text-primary-navy;
+  }
+  
+  .settings-nav-link:hover {
+    @apply bg-light-gray;
+  }
+  
+  .settings-nav-link.active {
+    @apply bg-primary-orange/10 text-primary-orange;
+  }
+  
+  .settings-nav-icon {
+    @apply w-5 h-5;
+  }
+  
+  /* Settings Content */
+  .settings-content {
+    @apply flex-1 bg-white rounded-lg p-8 shadow-sm;
+  }
+  
+  .settings-header {
+    @apply mb-8;
+  }
+  
+  .settings-title {
+    @apply text-2xl font-semibold text-primary-navy mb-2;
+  }
+  
+  .settings-description {
+    @apply text-text-gray;
+  }
+  
+  /* Alert */
+  .alert {
+    @apply flex items-start gap-4 p-4 rounded-lg mb-6;
+  }
+  
+  .alert-success {
+    @apply bg-success-green/10 text-success-green;
+  }
+  
+  .alert-icon {
+    @apply text-2xl;
+  }
+  
+  .alert-title {
+    @apply font-semibold mb-1;
+  }
+  
+  .alert-message {
+    @apply text-sm;
+  }
+  
+  /* Form */
+  .form-section {
+    @apply mb-8 p-6 border border-border-gray rounded-lg;
+  }
+  
+  .form-section-title {
+    @apply text-lg font-semibold text-primary-navy mb-4;
+  }
+  
+  .form-grid {
+    @apply grid grid-cols-2 gap-6;
+  }
+  
+  .form-group {
+    @apply mb-6;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-primary-navy mb-2;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-2 border border-border-gray rounded-lg focus:outline-none focus:border-primary-orange transition-colors;
+  }
+  
+  .form-input:disabled {
+    @apply bg-light-gray cursor-not-allowed;
+  }
+  
+  /* Switch */
+  .switch-group {
+    @apply flex justify-between items-center py-4 border-b border-border-gray last:border-b-0;
+  }
+  
+  .switch-label {
+    @apply font-medium text-primary-navy mb-1;
+  }
+  
+  .switch-description {
+    @apply text-sm text-text-gray;
+  }
+  
+  .switch {
+    @apply relative inline-block w-14 h-7;
+  }
+  
+  .switch input {
+    @apply opacity-0 w-0 h-0;
+  }
+  
+  .switch-slider {
+    @apply absolute cursor-pointer inset-0 bg-border-gray rounded-full transition-all duration-200;
+  }
+  
+  .switch-slider:before {
+    content: "";
+    @apply absolute left-1 bottom-1 bg-white w-5 h-5 rounded-full transition-all duration-200;
+  }
+  
+  input:checked + .switch-slider {
+    @apply bg-primary-orange;
+  }
+  
+  input:checked + .switch-slider:before {
+    @apply translate-x-7;
+  }
+  
+  /* Form Actions */
+  .form-actions {
+    @apply flex justify-end gap-4 mt-8 pt-8 border-t border-border-gray;
+  }
+  
+  .btn {
+    @apply px-6 py-2 rounded-lg font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-orange text-white hover:bg-light-orange;
+  }
+  
+  .btn-secondary {
+    @apply bg-light-gray text-text-gray hover:bg-border-gray hover:text-primary-navy;
+  }
