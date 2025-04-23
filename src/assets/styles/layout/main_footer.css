@@ -1,0 +1,51 @@
+.footer {
+    @apply bg-primary-dark text-white p-8 mt-auto;
+}
+
+.footer-content {
+    @apply max-w-7xl mx-auto grid grid-cols-4 gap-8;
+}
+
+.footer-section h3 {
+    @apply text-primary-orange text-lg font-semibold mb-4;
+}
+
+.footer-links {
+    @apply list-none m-0 p-0;
+}
+
+.footer-links li {
+    @apply mb-3;
+}
+
+.footer-links a {
+    @apply text-white no-underline text-sm transition-colors duration-200 opacity-80;
+}
+
+.footer-links a:hover {
+    @apply text-primary-orange opacity-100;
+}
+
+.footer-contact {
+    @apply text-sm leading-relaxed opacity-80;
+}
+
+.footer-contact p {
+    @apply mb-2;
+}
+
+.footer-bottom {
+    @apply max-w-7xl mx-auto mt-8 pt-8 border-t border-opacity-10 border-white flex justify-between items-center text-sm text-text-gray;
+}
+
+.footer-social {
+    @apply flex gap-6;
+}
+
+.footer-social a {
+    @apply text-text-gray no-underline transition-colors duration-200;
+}
+
+.footer-social a:hover {
+    @apply text-primary-orange;
+}

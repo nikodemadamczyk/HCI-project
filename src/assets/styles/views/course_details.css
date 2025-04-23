@@ -1,0 +1,144 @@
+/* Course Details Layout */
+.course-details {
+    @apply max-w-screen-xl mx-auto p-8;
+}
+
+.course-header {
+    @apply bg-primary-navy text-primary-white p-8 rounded-xl mb-8 shadow-md;
+}
+
+.course-header__top {
+    @apply flex justify-between items-start mb-6;
+}
+
+.course-title {
+    @apply text-2xl mb-2;
+}
+
+.course-code {
+    @apply text-light-orange text-lg;
+}
+
+.course-status {
+    @apply bg-success-green text-primary-white py-2 px-4 rounded-full font-medium text-sm;
+}
+
+.course-meta {
+    @apply flex gap-8 text-white/90 text-sm;
+}
+
+.meta-item {
+    @apply flex items-center gap-2;
+}
+
+.course-content {
+    @apply grid grid-cols-2 gap-8;
+}
+
+.content-section {
+    @apply bg-primary-white rounded-xl p-8 mb-8 shadow-sm;
+}
+
+.section-title {
+    @apply text-primary-navy text-xl font-semibold mb-6 pb-4 border-b-2 border-border-gray mt-6;
+}
+
+.section-content {
+    @apply text-text-gray leading-relaxed;
+}
+
+.content-list {
+    @apply list-inside mb-6;
+}
+
+.content-list li {
+    @apply mb-2 text-text-gray;
+}
+
+/* Instructor Profile */
+.instructor-profile {
+    @apply flex gap-6 mb-6;
+}
+
+.instructor-avatar {
+    @apply w-24 h-24 rounded-full bg-light-gray flex items-center justify-center text-2xl text-text-gray;
+}
+
+.instructor-info h3 {
+    @apply text-primary-navy mb-2;
+}
+
+.instructor-info p {
+    @apply text-text-gray text-sm mb-1;
+}
+
+/* Schedule Display */
+.schedule-grid {
+    @apply grid grid-cols-2 gap-4 mb-6;
+}
+
+.schedule-item {
+    @apply bg-light-gray p-4 rounded-md;
+}
+
+.schedule-day {
+    @apply text-primary-navy font-medium mb-2;
+}
+
+.schedule-time {
+    @apply text-text-gray text-sm;
+}
+
+/* Room Location */
+.room-info {
+    @apply bg-light-gray p-6 rounded-md mb-6;
+}
+
+.room-map {
+    @apply w-full h-52 bg-border-gray rounded-md flex items-center justify-center text-text-gray mt-4;
+}
+
+.room-map img {
+    @apply w-full h-full object-cover rounded-md;
+}
+
+.enrollment-section {
+    @apply bg-primary-white p-6 rounded-xl text-center shadow-sm;
+}
+
+.enrollment-status {
+    @apply text-xl text-primary-navy mb-4;
+}
+
+.enroll-btn {
+    @apply w-full p-4 bg-primary-orange text-primary-white border-none rounded-md font-semibold cursor-pointer transition-colors duration-200 ease-in-out;
+}
+
+.enroll-btn:hover {
+    @apply bg-light-orange;
+}
+
+/* Footer Styles */
+.footer-contact {
+    @apply text-sm leading-relaxed opacity-80;
+}
+
+.footer-contact p {
+    @apply mb-2;
+}
+
+.footer-bottom {
+    @apply max-w-screen-xl mx-auto mt-8 pt-8 border-t border-white/10 flex justify-between items-center text-sm text-text-gray;
+}
+
+.footer-social {
+    @apply flex gap-6;
+}
+
+.footer-social a {
+    @apply text-text-gray no-underline transition-colors duration-200 ease-in-out;
+}
+
+.footer-social a:hover {
+    @apply text-primary-orange;
+}

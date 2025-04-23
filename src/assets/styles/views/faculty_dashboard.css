@@ -1,0 +1,129 @@
+.dashboard {
+  @apply max-w-7xl mx-auto px-8 py-8;
+}
+
+.dashboard-header {
+  @apply flex justify-between items-center mb-8;
+}
+
+.welcome-text h1 {
+  @apply text-2xl font-bold text-primary-navy mb-2;
+}
+
+.welcome-text p {
+  @apply text-text-gray;
+}
+
+.action-buttons {
+  @apply flex gap-4;
+}
+
+.dashboard-grid {
+  @apply grid grid-cols-3 gap-8;
+}
+
+.dashboard-main {
+  @apply col-span-2;
+}
+
+.course-cards {
+  @apply space-y-6;
+}
+
+.course-card {
+  @apply bg-white rounded-xl p-6 shadow-sm;
+}
+
+.course-card__header {
+  @apply flex justify-between items-start mb-6;
+}
+
+.course-card__title {
+  @apply text-lg font-semibold text-primary-navy mb-1;
+}
+
+.course-card__students {
+  @apply text-sm text-text-gray;
+}
+
+.course-card__status {
+  @apply px-3 py-1 rounded-full text-sm font-medium bg-success-green/10 text-success-green;
+}
+
+.course-card__actions {
+  @apply grid grid-cols-3 gap-4;
+}
+
+.card-btn {
+  @apply px-4 py-2 text-sm text-text-gray rounded-lg transition-colors hover:bg-light-gray hover:text-primary-navy;
+}
+
+/* Profile Section */
+.profile-section {
+  @apply bg-white rounded-xl p-6 shadow-sm mb-6;
+}
+
+.profile-header {
+  @apply flex items-center gap-4 mb-6;
+}
+
+.profile-avatar {
+  @apply w-16 h-16 rounded-full bg-primary-orange/10 text-primary-orange flex items-center justify-center text-xl font-semibold;
+}
+
+.profile-info h2 {
+  @apply text-lg font-semibold text-primary-navy mb-1;
+}
+
+.profile-info p {
+  @apply text-sm text-text-gray;
+}
+
+.profile-details {
+  @apply space-y-4;
+}
+
+.detail-item {
+  @apply flex flex-col;
+}
+
+.detail-label {
+  @apply text-sm font-medium text-primary-navy mb-1;
+}
+
+.detail-value {
+  @apply text-sm text-text-gray;
+}
+
+/* Schedule Section */
+.schedule-section {
+  @apply bg-white rounded-xl p-6 shadow-sm;
+}
+
+.section-header {
+  @apply flex justify-between items-center mb-6;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-primary-navy;
+}
+
+.room-select {
+  @apply px-3 py-2 border border-border-gray rounded-lg text-sm;
+}
+
+.schedule-grid {
+  @apply grid grid-cols-5 gap-2;
+}
+
+.schedule-header {
+  @apply text-sm font-medium text-primary-navy text-center py-2;
+}
+
+.schedule-cell {
+  @apply min-h-[100px] p-2 border border-border-gray rounded-lg;
+}
+
+.schedule-event {
+  @apply text-xs p-2 bg-primary-orange/10 text-primary-orange rounded mb-2 last:mb-0;
+}
