@@ -29,7 +29,7 @@
   })
   
   const formatSchedule = (schedule) => {
-    // Przykładowa funkcja formatująca harmonogram
+
     return schedule
   }
   </script>

@@ -2,7 +2,6 @@
 <template>
   <div class="flex flex-col justify-center items-center px-8 py-16 min-h-[calc(100vh-180px)]">
     <div class="w-full max-w-lg">
-      <!-- Toggle Buttons -->
       <div class="bg-primary-white rounded-t-xl p-2 flex shadow-sm">
         <button 
           class="flex-1 py-4 px-6 text-base font-semibold relative transition-all"
@@ -20,7 +19,6 @@
         </button>
       </div>
 
-      <!-- Form Container -->
       <div class="bg-primary-white rounded-b-xl p-10 shadow-md">
         <LoginForm 
           v-if="activeForm === 'login'"
@@ -51,7 +49,6 @@ const activeForm = ref('login')
 const handleLogin = async (credentials) => {
   try {
     const user = await authStore.login(credentials)
-    // Przekieruj do odpowiedniego dashboardu
     if (user.role === 'teacher') {
       router.push('/faculty/dashboard')
     } else {

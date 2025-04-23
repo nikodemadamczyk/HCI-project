@@ -2,7 +2,6 @@
 <template>
   <div class="container max-w-4xl mx-auto px-8 py-8">
     <div class="bg-white rounded-xl shadow-sm">
-      <!-- Header -->
       <div class="border-b border-border-gray p-6">
         <div class="flex justify-between items-center">
           <div>
@@ -19,7 +18,6 @@
         </div>
       </div>
 
-      <!-- Search and Filters -->
       <div class="p-6 border-b border-border-gray">
         <div class="flex gap-4">
           <div class="flex-1">
@@ -41,7 +39,6 @@
         </div>
       </div>
 
-      <!-- Students List -->
       <div class="p-6">
         <div class="overflow-x-auto">
           <table class="min-w-full">
@@ -165,7 +162,6 @@ const viewStudentDetails = (studentId) => {
 const removeStudent = async (studentId) => {
   if (confirm('Are you sure you want to remove this student from the course?')) {
     try {
-      // Tutaj normalnie byłoby zapytanie do API
       students.value = students.value.filter(s => s.id !== studentId)
     } catch (error) {
       console.error('Error removing student:', error)
@@ -175,7 +171,6 @@ const removeStudent = async (studentId) => {
 
 onMounted(() => {
   if (route.params.id) {
-    // Tutaj normalnie byłoby zapytanie do API
     courseData.value.id = route.params.id
   }
 })

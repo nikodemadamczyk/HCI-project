@@ -1,4 +1,3 @@
-// router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAuthStore } from '@/stores/authStore'
 import Home from '../views/Home.vue'
@@ -141,14 +140,13 @@ const router = createRouter({
 
 // router.beforeEach((to, from, next) => {
 //   const authStore = useAuthStore()
-  
-//   // Sprawdź czy strona wymaga autoryzacji
+
 //   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
 //     next('/auth')
 //     return
 //   }
 
-//   // Sprawdź uprawnienia roli
+
 //   if (to.meta.role) {
 //     const userRole = authStore.user?.role
 //     if (userRole !== to.meta.role) {
@@ -157,7 +155,7 @@ const router = createRouter({
 //     }
 //   }
 
-//   // Przekieruj zalogowanych użytkowników do odpowiedniego dashboardu z /auth
+
 //   if (to.path === '/auth' && authStore.isAuthenticated) {
 //     if (authStore.isTeacher) {
 //       next('/faculty/dashboard')

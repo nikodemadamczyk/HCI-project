@@ -2,7 +2,6 @@
 <template>
   <div class="container max-w-4xl mx-auto px-8 py-8">
     <div class="bg-white rounded-xl shadow-sm">
-      <!-- Header -->
       <div class="border-b border-border-gray p-6">
         <div class="flex justify-between items-center">
           <h1 class="text-2xl font-semibold text-primary-navy">Edit Course</h1>
@@ -16,7 +15,6 @@
         </div>
       </div>
 
-      <!-- Form -->
       <form @submit.prevent="handleSubmit" class="p-6 space-y-6">
         <div class="form-group">
           <label class="form-label">Course Title</label>
@@ -153,7 +151,6 @@ const courseData = ref({
 
 const loadCourseData = async () => {
   try {
-    // Tutaj normalnie byłoby zapytanie do API
     const data = {
       title: 'Human-Computer Interaction',
       description: 'Introduction to fundamental principles and practices of Human-Computer Interaction (HCI).',
@@ -172,7 +169,6 @@ const loadCourseData = async () => {
 
 const handleSubmit = async () => {
   try {
-    // Tutaj normalnie byłoby zapytanie do API
     console.log('Saving course:', courseData.value)
     router.push('/faculty/dashboard')
   } catch (error) {
@@ -204,7 +200,6 @@ onMounted(() => {
   @apply text-primary-orange focus:ring-primary-orange;
 }
 
-/* Override radio button styles for better visibility */
 input[type="radio"] {
   @apply w-4 h-4;
 }

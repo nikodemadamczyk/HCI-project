@@ -109,7 +109,6 @@ const timeToSlot = (timeString) => {
   return timeString.split(':')[0] + ':00'
 }
 
-// Function to get the day abbreviation that matches the course day format
 const getDayAbbreviation = (fullDay) => {
   const days = {
     'Monday': 'Mon',
@@ -128,7 +127,6 @@ const getEnrolledCourseForTimeSlot = (day, time) => {
     const [courseDay, courseTimeRange] = course.schedule.split(' ')
     const [startTime] = courseTimeRange.split('-')
     
-    // Convert everything to the same format for comparison
     const slotTime = timeToSlot(time)
     const courseSlotTime = timeToSlot(startTime)
     

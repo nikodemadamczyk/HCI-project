@@ -1,7 +1,6 @@
 # src/views/Profile.vue
 <template>
   <main class="settings-container">
-    <!-- Settings Navigation -->
     <aside class="settings-nav">
       <h2 class="settings-nav-title">Settings</h2>
       <ul class="settings-nav-list">
@@ -19,9 +18,7 @@
       </ul>
     </aside>
 
-    <!-- Settings Content -->
     <div class="settings-content">
-      <!-- Success Message -->
       <div v-if="showSuccessMessage" class="alert alert-success">
         <i class="fas fa-check-circle alert-icon"></i>
         <div class="alert-content">
@@ -36,7 +33,6 @@
       </div>
 
       <form @submit.prevent="handleSubmit">
-        <!-- Basic Information -->
         <div class="form-group">
           <h3 class="form-label">Basic Information</h3>
           <div class="form-grid">
@@ -104,7 +100,6 @@
           </div>
         </div>
 
-        <!-- Contact Information -->
         <div class="form-group">
           <h3 class="form-label">Contact Information</h3>
           <div class="form-grid">
@@ -151,7 +146,6 @@
           </div>
         </div>
 
-        <!-- Profile Visibility -->
         <div class="form-group">
           <h3 class="form-label">Profile Visibility</h3>
           <div 
@@ -170,7 +164,6 @@
           </div>
         </div>
 
-        <!-- Form Actions -->
         <div class="form-actions">
           <button type="button" class="btn btn-secondary" @click="resetForm">
             Cancel
@@ -239,7 +232,6 @@ const setActiveSection = (section) => {
 
 const handleSubmit = async () => {
   try {
-    // Tu normalnie byłoby zapytanie do API
     showSuccessMessage.value = true
     setTimeout(() => {
       showSuccessMessage.value = false
@@ -254,7 +246,6 @@ const resetForm = () => {
 }
 
 onMounted(() => {
-  // Tu normalnie byłoby pobieranie danych użytkownika z API
   if (authStore.isTeacher) {
     userData.value = {
       ...defaultTeacherData,

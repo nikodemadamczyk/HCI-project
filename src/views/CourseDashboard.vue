@@ -1,7 +1,6 @@
 <template>
     <main class="dashboard">
       <div class="dashboard-grid">
-        <!-- Left Column -->
         <div class="dashboard-main">
           <div class="flex justify-between items-center mb-6">
             <h2 class="section-title">My Courses</h2>
@@ -47,12 +46,31 @@
                   <i class="fas fa-external-link-alt"></i>
                   Open in Moodle
                 </a>
+                <div>
+                  <button 
+                    class=" text-sm hover:underline"  style="padding-right: 15px"
+                  >
+                    Register for exam     
+                  </button>
+                
+                  <button 
+                    class="text-error-red text-sm hover:underline"
+                    @click.stop="unenrollFromCourse(course)"
+                  >
+                    Unenroll
+                  </button>
+                </div>
+                <!-- <button 
+                  class=" text-sm hover:underline"
+                >
+                  Register for exam
+                </button>
                 <button 
                   class="text-error-red text-sm hover:underline"
                   @click.stop="unenrollFromCourse(course)"
                 >
                   Unenroll
-                </button>
+                </button> -->
               </div>
             </div>
           </div>

@@ -635,13 +635,12 @@ export const useCourseStore = defineStore('courses', {
         enrolledAt: new Date().toISOString()
       }
   
-      // Update course remaining spots
+
       const courseIndex = this.courses.findIndex(c => c.id === courseId)
       if (courseIndex !== -1) {
         this.courses[courseIndex].enrollment.remaining--
       }
-  
-      // Add enrollment
+
       this.enrollments.push(enrollment)
       localStorage.setItem('enrollments', JSON.stringify(this.enrollments))
   

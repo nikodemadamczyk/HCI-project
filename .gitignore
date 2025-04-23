@@ -1,3 +1,5 @@
+
+
 # Logs
 logs
 *.log
@@ -9,14 +11,19 @@ lerna-debug.log*
 
 
 node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 dist
 dist-ssr
 *.local
 .vscode
 
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 .DS_Store
 *.suo
@@ -25,3 +32,14 @@ dist-ssr
 *.sln
 *.sw?
 
+# Env files
+.env
+.env.local
+.env.*.local
+
+.DS_Store
+Thumbs.db
+
+.cache
+.temp
+.vite-ssg-temp

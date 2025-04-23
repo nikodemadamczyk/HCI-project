@@ -18,7 +18,6 @@
       </div>
   
       <div class="dashboard-grid">
-        <!-- Left Column -->
         <div class="dashboard-main">
           <div class="course-cards">
             <div v-for="course in courses" :key="course.id" class="course-card">
@@ -52,9 +51,7 @@
           </div>
         </div>
   
-        <!-- Right Column -->
         <div class="dashboard-sidebar">
-          <!-- Profile Section -->
           <div class="profile-section">
             <div class="profile-header">
               <div class="profile-avatar">

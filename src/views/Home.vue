@@ -140,7 +140,6 @@
           </div>
         </div>
 
-        <!-- Smart Room Allocation -->
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-door-open"></i>
@@ -163,7 +162,6 @@
           </div>
         </div>
 
-        <!-- Interactive Campus Map -->
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-map-marked-alt"></i>
@@ -186,7 +184,6 @@
           </div>
         </div>
 
-        <!-- Registration Progress -->
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-user-graduate"></i>
@@ -221,7 +218,6 @@
             </div>
 
             <div class="resources-grid">
-                <!-- Campus Buildings & Rooms -->
                 <div class="resource-card">
                     <div class="resource-header">
                         <div class="resource-icon">
@@ -264,7 +260,6 @@
                     </div>
                 </div>
 
-                <!-- Department Directory -->
                 <div class="resource-card">
                     <div class="resource-header">
                         <div class="resource-icon">
@@ -307,7 +302,6 @@
                     </div>
                 </div>
 
-                <!-- Academic Calendar -->
                 <div class="resource-card">
                     <div class="resource-header">
                         <div class="resource-icon">
@@ -350,7 +344,6 @@
                     </div>
                 </div>
 
-                <!-- Faculty Offices -->
                 <div class="resource-card">
                     <div class="resource-header">
                         <div class="resource-icon">
@@ -399,7 +392,6 @@
   <section class="help-support">
         <div class="help-support__container">
             <div class="help-support__content">
-                <!-- Left Column -->
                 <div class="help-info">
                     <h2 class="help-info__title">Need Help? We're Here to Support You</h2>
                     <p class="help-info__subtitle">Get assistance with registration, technical issues, or academic guidance</p>
@@ -445,7 +437,6 @@
                     </button>
                 </div>
 
-                <!-- Right Column -->
                 <div class="help-resources">
                     <div class="faq-preview">
                         <h3 class="faq-preview__title">Frequently Asked Questions</h3>
@@ -478,9 +469,6 @@
     </section>
 </template>
 
-<script setup>
-// Component logic can be added here if needed
-</script>
 
 <style scoped>
 @import '../assets/styles/views/home.css';

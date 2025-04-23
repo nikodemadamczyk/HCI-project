@@ -2,7 +2,6 @@
 <template>
   <div class="container max-w-4xl mx-auto px-8 py-8">
     <div class="bg-white rounded-xl shadow-sm">
-      <!-- Header -->
       <div class="border-b border-border-gray p-6">
         <div class="flex justify-between items-center">
           <div>
@@ -19,7 +18,6 @@
         </div>
       </div>
 
-      <!-- Upload Section -->
       <div class="p-6 border-b border-border-gray">
         <div class="flex gap-4">
           <input 
@@ -38,7 +36,6 @@
         </div>
       </div>
 
-      <!-- Materials List -->
       <div class="p-6">
         <div class="space-y-4">
           <div 
@@ -72,7 +69,6 @@
           </div>
         </div>
 
-        <!-- Empty State -->
         <div 
           v-if="materials.length === 0" 
           class="text-center py-12"
@@ -138,10 +134,8 @@ const getFileIcon = (type) => {
 const handleFileChange = (event) => {
   const file = event.target.files[0]
   if (file) {
-    // Tutaj normalnie byłoby wysyłanie pliku do API
     console.log('Uploading file:', file)
     
-    // Symulacja dodania pliku
     const newMaterial = {
       id: materials.value.length + 1,
       name: file.name,
@@ -154,7 +148,6 @@ const handleFileChange = (event) => {
 }
 
 const downloadMaterial = (material) => {
-  // Tutaj normalnie byłoby pobieranie pliku
   console.log('Downloading:', material.name)
 }
 
@@ -171,7 +164,6 @@ const deleteMaterial = async (materialId) => {
 
 onMounted(() => {
   if (route.params.id) {
-    // Tutaj normalnie byłoby zapytanie do API
     courseData.value.id = route.params.id
   }
 })

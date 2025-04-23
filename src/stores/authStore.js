@@ -10,22 +10,20 @@ export const useAuthStore = defineStore('auth', () => {
   const isStudent = computed(() => user.value?.role === 'student')
 
   const register = async (userData) => {
-    // Sprawdź czy użytkownik już istnieje
+
     const existingUser = users.value.find(u => u.email === userData.email)
     if (existingUser) {
       throw new Error('User with this email already exists')
     }
 
-    // Stwórz nowego użytkownika
     const newUser = {
       id: Date.now(),
       fullName: userData.fullName,
       email: userData.email,
       role: userData.role,
-      password: userData.password // W prawdziwej aplikacji hasło powinno być zahashowane!
+      password: userData.password
     }
 
-    // Dodaj do listy użytkowników
     users.value.push(newUser)
     localStorage.setItem('users', JSON.stringify(users.value))
 
@@ -41,7 +39,6 @@ export const useAuthStore = defineStore('auth', () => {
       throw new Error('Invalid email or password')
     }
 
-    // Zapisz zalogowanego użytkownika
     const loggedUser = {
       id: foundUser.id,
       email: foundUser.email,

@@ -22,7 +22,6 @@
         </div>
 
         <div class="course-content">
-            <!-- Left Column -->
             <div class="main-content">
                 <section class="content-section">
                     <h2 class="section-title">Course Description</h2>
@@ -49,7 +48,6 @@
                 </section>
             </div>
 
-            <!-- Right Column -->
             <div class="sidebar-content">
                 <section class="content-section">
                     <h2 class="section-title">Schedule & Location</h2>
