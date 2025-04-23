@@ -2,9 +2,6 @@
 
 A course management system for Space University developed as part of the Human-Computer Interaction course project. The system focuses on providing an intuitive interface for course management, scheduling, and room assignments based on specific client requirements.
 
-## 🔗 Live Demo
-Visit the live demo: [https://nikodemadamczyk.github.io/HCI-project](https://nikodemadamczyk.github.io/HCI-project)
-
 ## 📋 Project Overview
 
 This project was developed based on client conversations and requirements for a new course management system at Space University. The implementation focuses on creating a user-friendly interface that meets the specific needs identified during client meetings.
